@@ -150,11 +150,11 @@ class About extends Component {
               </Col>
                </Row>
                              <Row style={{margin:'2em 0'}}>
-                   <Link to="http://linkedin.com/in/neerajsudhakar">
+                   <a href="http://linkedin.com/in/neerajsudhakar">
               <Col span={6} style={{paddingLeft:'20em'}}>
               <img height='400px' width='' src={require('../assets/neeraj.JPG')}/>
               </Col>
-                </Link>
+                </a>
               <Col span={11}  style={{paddingTop:'.5em', paddingLeft:'7em', textAlign:'left' , paddingBottom:'2em' }}>
                   <Title level={2}>
                       Neeraj Sudhakar
