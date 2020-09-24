@@ -24,7 +24,7 @@ Installation instructions:
   
   With the running server on your local http://127.0.0.1:8000/ user your browser to populate categories by navigating to:
     
-    http://127.0.0.1:8000/populate categories
+    http://127.0.0.1:8000/populate_categories
     
   you can now start the npm server in another terminal using:
   
