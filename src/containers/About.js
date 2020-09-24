@@ -101,7 +101,7 @@ class About extends Component {
                     </Col>
                     <Col span={12} style={{paddingLeft:'8em', textAlign:'left', paddingTop:'3em', paddingRight:'1em'}} >
                     <Title level={4} style={{color:'black'}}>
-                        Everyday there are hundreds of peer-reviewed academic papers filled with cutting edge research being uploaded to Cornelle's Arxiv.org. Byte Size Arxiv takes the articles as they are uploaded and isolates three key sentences in the abstract for a quickly digestible summary.
+                        Everyday there are hundreds of peer-reviewed academic papers filled with cutting edge research being uploaded to Cornell's Arxiv.org. Byte Size Arxiv takes the articles as they are uploaded and isolates three key sentences in the abstract for a quickly digestible summary.
                         This is done using term frequency–inverse document frequency (TF-IDF), a machine learning model.
                     </Title>
                     <Title level={4} style={{colo:'black'}}>
