@@ -58,18 +58,23 @@ class About extends Component {
           </Button>
          </div>
       </Header>
+        <div className="Body" style={{whiteSpace: 'pre-wrap', overflowWrap: 'break-word', color:'#FAEEDC', textAlign:'left',float:'middle'}}>
             <Content style={{color:'#323030', backgroundColor:'white', padding: '0 50px' ,margin:'60px 0', marginLeft:'5em', marginRight:'5em'}}>
      
 
-              <Row style={{paddingLeft: '10em', paddingTop:'5em', margin:'30px 0'}}>
-              <Col span={9} style={{fontsize:'100', textAlign:'left', paddingTop:'.5em'}} >
+              <Row style={{ paddingTop:'5em', margin:'30px 0'}}>
+              <Col span={9} style={{fontsize:'100',paddingLeft:'0 0px', textAlign:'left', paddingTop:'.5em'}} >
       
+                  <Row style={{paddingTop:'1em'}}>
                   <Title level={1} style={{color:'black'}}>
                       Welcome to Byte Size Arxiv
                   </Title>
+                  </Row>
+                  <Row style={{paddingTop:'1em'}}>
                    <Title level={4} style={{color:'black'}}>
                       We are on a mission to make it easy for you to stay up to date with cutting edge research being shared on Arxiv.org.
                   </Title>
+                  </Row>
                   <Row style={{paddingTop:'1em'}}>
                       <Title level={4} style={{color:'black'}}>
                       To get started, click the button below and select a category to browse
@@ -176,6 +181,7 @@ class About extends Component {
               </Col>
                </Row>
             </Content>
+          </div>
 
             <Footer id='news' style={{backgroundColor:'black', textAlign: 'left' }}>
           <Title level={3}>Interested in a Weekly Digest?</Title>
