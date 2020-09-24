@@ -185,7 +185,7 @@ class About extends Component {
           <Input
 
           style={{margin: '0 auto',width:'200px'}}
-          placeholder="Email" />
+          placeholder="Enter Email to be Notified of Newsletter" />
 
           </Form.Item>
           <Button
