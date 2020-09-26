@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import BaseRouter from './routes';
 import { BrowserRouter as Router } from 'react-router-dom';
 import logo from './logo.svg';
-import './App.css';
+import './App.scss';
 import 'antd/dist/antd.css';
 import CustomLayour from './containers/Layout';
 import renderEmpty from 'antd/lib/config-provider/renderEmpty';
@@ -17,9 +17,9 @@ class App extends Component {
     return (
       <div className="App">
         <Router>
-       
+
             <BaseRouter />
-        
+
         </Router>
       </div>
     );
