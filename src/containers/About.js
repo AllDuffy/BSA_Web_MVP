@@ -5,6 +5,7 @@ import { makeStyles } from '@material-ui/core/styles';
 import Button from '@material-ui/core/Button';
 const { Header, Content, Footer } = Layout;
 const { Title } = Typography;
+
 class About extends Component {
     state = {  }
 
@@ -20,19 +21,19 @@ class About extends Component {
           "email":values.email
         }),
         });
-        
+
         const emailResponse = await response.json();
       };
-    
+
        gotoLink (ele){
         let offsetTop  = document.getElementById(ele).offsetTop;
         window.scrollTo({
-            top: offsetTop-100, 
+            top: offsetTop-100,
             behavior: "smooth"
         });
     }
-    render() { 
-        return ( 
+    render() {
+        return (
             <Layout className="layout">
       <Header className="header" style={{backgroundColor:'#FAEEDC'}}>
         <div className="logo" style={{color:'#FAEEDC', textAlign:'left',float:'left'}}>
@@ -60,13 +61,13 @@ class About extends Component {
       </Header>
         <div className="Body" style={{whiteSpace: 'pre-wrap', overflowWrap: 'break-word', color:'#FAEEDC', textAlign:'left',float:'middle'}}>
             <Content style={{color:'#323030', backgroundColor:'white', padding: '0 50px' ,margin:'60px 0', marginLeft:'5em', marginRight:'5em'}}>
-     
+
 
               <Row style={{ paddingTop:'5em', margin:'30px 0'}}>
               <Col span={9} style={{fontsize:'100',paddingLeft:'0 0px', textAlign:'left', paddingTop:'.5em'}} >
-      
+
                   <Row style={{paddingTop:'1em'}}>
-                  <Title level={1} style={{color:'black'}}>
+                  <Title level={1} className="sample-class">
                       Welcome to Byte Size Arxiv
                   </Title>
                   </Row>
@@ -208,5 +209,5 @@ class About extends Component {
          );
     }
 }
- 
+
 export default About;
