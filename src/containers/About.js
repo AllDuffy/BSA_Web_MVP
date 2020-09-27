@@ -112,7 +112,7 @@ class About extends Component {
                     <Title level={4} style={{colo:'black'}}>
                         The model
                         creates a score for each word (ignoring stopwords). If a given word appears frequently in the abstract it’s score goes up. However, if the word is also common amongst other articles, the score goes down.
-                        The words with the highest scores are the most import words unique to the article in question!
+                        The words with the highest scores are the most important words unique to the article in question!
                     </Title>
                         <Row style={{paddingTop:'1em'}}>
                             <Title level={4} style={{color:'black'}}>
