@@ -72,34 +72,28 @@ class About extends Component {
                   </div>
                 </div>
                 <Row>
-                    <Col span={24} style={{textAlign:'center', paddingTop:'3em', padding:'2em'}}>
-                    <Title level={1} style={{color:'black'}}>
-                    Building B.S.A.
-                    </Title>
+                    <Col span={24} className="building-bsa-heading">
+                      <Title level={1}> Building B.S.A. </Title>
                     </Col>
                   </Row>
-
-                <Row>
-                  <Col span={11} style={{paddingLeft:'8em', textAlign:'left'}}>
-                  <img height='500px' width='' src={require('../assets/BSA.gif')}/>
-                  </Col>
-                  <Col span={12} style={{paddingLeft:'8em', textAlign:'left', paddingTop:'3em', paddingRight:'1em'}} >
-                  <Title level={4} style={{color:'black'}}>
+                <div className="building-bsa-content">
+                  <div className="building-bsa-image">
+                    <img src={require('../assets/BSA.gif')}/>
+                  </div>
+                  <div className="building-bsa-text">
+                    <h3>
                       Everyday there are hundreds of peer-reviewed academic papers filled with cutting edge research being uploaded to Cornell's Arxiv.org. Byte Size Arxiv takes the articles as they are uploaded and isolates three key sentences in the abstract for a quickly digestible summary.
                       This is done using term frequency–inverse document frequency (TF-IDF), a machine learning model.
-                  </Title>
-                  <Title level={4} style={{colo:'black'}}>
-                      The model
-                      creates a score for each word (ignoring stopwords). If a given word appears frequently in the abstract it’s score goes up. However, if the word is also common amongst other articles, the score goes down.
+                    </h3>
+                    <h3>
+                      The model creates a score for each word (ignoring stopwords). If a given word appears frequently in the abstract it’s score goes up. However, if the word is also common amongst other articles, the score goes down.
                       The words with the highest scores are the most import words unique to the article in question!
-                  </Title>
-                      <Row style={{paddingTop:'1em'}}>
-                          <Title level={4} style={{color:'black'}}>
-                   Our goal is to spread this valuable knowledge by sharing key themes at a glance. Please reach out with any questions, concerns or opportunities. We would love to chat!
-                          </Title>
-                      </Row>
-                  </Col>
-                </Row>
+                    </h3>
+                    <h3>
+                      Our goal is to spread this valuable knowledge by sharing key themes at a glance. Please reach out with any questions, concerns or opportunities. We would love to chat!
+                    </h3>
+                  </div>
+                </div>
                 <Row>
                     <Col span={24} style={{textAlign:'center', paddingTop:'2em'}}>
                    <Title level={1} style={{color:'black', paddingBottom:'1em'}}>
