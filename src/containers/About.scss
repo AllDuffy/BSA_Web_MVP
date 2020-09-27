@@ -1,10 +1,16 @@
-// Reason why !important needs to be included:
+// Reason why `!important` needs to be included:
 //https://stackoverflow.com/questions/58070076/how-to-import-ant-design-components-without-default-class-names
 
 // About.scss
 .header-bar {
   background-color: #FAEEDC !important;
-  //color: black !important;
+  color: black !important;
+
+  .header-bar-logo {
+    color: #FAEEDC !important;
+    text-align: left !important;
+    float: left !important;
+  }
 
   .header-bar-title {
     margin-left: 2.2em !important;
@@ -16,12 +22,48 @@
     padding-right: 6.1em !important;
 
     .bsa-button {
-      color: pink !important;
       margin-left: 15px !important;
+    }
+
+    .newsletter-button {
+      margin-left: 15px  !important;
     }
   }
 }
 
-.sample-class {
-  color: pink !important;
+.summary {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-evenly;
+  // TODO: Implement flex grow/shrink/basis here
+  padding-top: 100px;
+  padding-bottom: 20px;
+  color: black !important;
+
+  .summary-content {
+    width: 500px;
+    text-align: center;
+
+    .summary-text {
+      padding: 20px;
+    }
+
+    .get-started-button {
+      padding: 20px;
+      text-align: center;
+    }
+  }
+
+  .summary-image {
+    padding: 40px;
+    height: 400px;
+
+    img {
+      max-width: 100%;
+      max-height: 100%;
+    }
+  }
+
 }
+

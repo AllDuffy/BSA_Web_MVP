@@ -36,60 +36,41 @@ class About extends Component {
       return (
         <Layout className="layout">
           <Header className="header-bar">
-            <div className="logo" style={{color:'#FAEEDC', textAlign:'left',float:'left'}}>
-              <Title className="header-bar-title" level={2}>
-                 Byte Size Arxiv
-              </Title>
+            <div className="header-bar-logo">
+              <Title className="header-bar-title" level={2}> Byte Size Arxiv </Title>
             </div>
             <div className="header-bar-menu">
-              <Button className="home-button" size='large' href='/'>
-                Home
-              </Button>
-              <Button className="bsa-button" size='large' href = '/B.S.A.'>
-                B.S.A.
-              </Button>
+              <Button className="home-button" size='large' href='/'> Home </Button>
+              <Button className="bsa-button" size='large' href = '/B.S.A.'> B.S.A. </Button>
               <Button
-                size={'large'}
+                className="newsletter-button"
+                size='large'
                 onClick={() => this.gotoLink('news')}
-                style={{marginLeft:'15px'}}
                 type='secondary'
               >
                Newsletter
               </Button>
              </div>
           </Header>
-          <div className="Body" style={{whiteSpace: 'pre-wrap', overflowWrap: 'break-word', color:'#FAEEDC', textAlign:'left',float:'middle'}}>
+          <div style={{whiteSpace: 'pre-wrap', overflowWrap: 'break-word', color:'#FAEEDC', textAlign:'left',float:'middle'}}>
             <Content style={{color:'#323030', backgroundColor:'white', padding: '0 50px' ,margin:'60px 0', marginLeft:'5em', marginRight:'5em'}}>
-              <Row style={{ paddingTop:'5em', margin:'30px 0'}}>
-              <Col span={9} style={{fontsize:'100',paddingLeft:'0 0px', textAlign:'left', paddingTop:'.5em'}} >
-
-                <Row style={{paddingTop:'1em'}}>
-                <Title level={1} className="sample-class">
-                    Welcome to Byte Size Arxiv
-                </Title>
-                </Row>
-                <Row style={{paddingTop:'1em'}}>
-                 <Title level={4} style={{color:'black'}}>
-                    We are on a mission to make it easy for you to stay up to date with cutting edge research being shared on Arxiv.org.
-                </Title>
-                </Row>
-                <Row style={{paddingTop:'1em'}}>
-                    <Title level={4} style={{color:'black'}}>
-                    To get started, click the button below and select a category to browse
-                    Byte-Size summaries of brand new publications are made daily using Machine Learning.
-                </Title>
-                </Row>
-                <Row style={{paddingLeft:'5em',paddingTop:'2em'}}>
-                <Button
-                    variant='outlined' href='/B.S.A.'>
-                    Try Byte Size Arxiv
-                </Button>
-                </Row>
-            </Col>
-            <Col span={1} style={{paddingLeft:'18em', textAlign:'right', paddingBottom:'2em'}}>
-            <img height='350px' width='' src={require('../assets/BSA_Logo.png')}/>
-            </Col>
-            </Row>
+                <div className="summary">
+                  <div className="summary-content">
+                     <Title className="summary-heading" level={1}>Welcome to Byte Size Arxiv</Title>
+                     <h3 className="summary-text">
+                       We are on a mission to make it easy for you to stay up to date with cutting edge research being shared on Arxiv.org.
+                     </h3>
+                     <h3 className="get-started-text">
+                      To get started, click the button below and select a category to browse Byte-Size summaries of brand new publications are made daily using Machine Learning.
+                     </h3>
+                      <div className="get-started-button">
+                        <Button variant='outlined' href='/B.S.A.'> Try Byte Size Arxiv </Button>
+                      </div>
+                  </div>
+                  <div className="summary-image">
+                    <img src={require('../assets/BSA_Logo.png')}/>
+                  </div>
+                </div>
                 <Row>
                     <Col span={24} style={{textAlign:'center', paddingTop:'3em', padding:'2em'}}>
                     <Title level={1} style={{color:'black'}}>
