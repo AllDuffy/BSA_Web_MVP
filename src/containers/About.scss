@@ -1,3 +1,27 @@
+// Reason why !important needs to be included:
+//https://stackoverflow.com/questions/58070076/how-to-import-ant-design-components-without-default-class-names
+
+// About.scss
+.header-bar {
+  background-color: #FAEEDC !important;
+  //color: black !important;
+
+  .header-bar-title {
+    margin-left: 2.2em !important;
+    padding-top: 10px !important;
+  }
+
+  .header-bar-menu {
+    text-align: right !important;
+    padding-right: 6.1em !important;
+
+    .bsa-button {
+      color: pink !important;
+      margin-left: 15px !important;
+    }
+  }
+}
+
 .sample-class {
   color: pink !important;
 }

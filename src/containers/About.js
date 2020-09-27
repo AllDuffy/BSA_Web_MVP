@@ -33,180 +33,174 @@ class About extends Component {
         });
     }
     render() {
-        return (
-            <Layout className="layout">
-      <Header className="header" style={{backgroundColor:'#FAEEDC'}}>
-        <div className="logo" style={{color:'#FAEEDC', textAlign:'left',float:'left'}}>
-         <Title level={2} style={{marginLeft:'2.2em', color:'black', paddingTop:'10px'}}>
-             Byte Size Arxiv
-         </Title>
-        </div>
-        <div style={{textAlign:'right', paddingRight:'6.1em'}}>
-
-          <Button size='large' href='/'>
-          Home
-          </Button>
-          <Button size='large'
-              style={{marginLeft:'15px'}}
-         href = '/B.S.A.'>
-          B.S.A.
-          </Button>
-          <Button size={'large'}
-           onClick={() => this.gotoLink('news')}
-           style={{marginLeft:'15px'}}
-          type='secondary'>
-           Newsletter
-          </Button>
-         </div>
-      </Header>
-        <div className="Body" style={{whiteSpace: 'pre-wrap', overflowWrap: 'break-word', color:'#FAEEDC', textAlign:'left',float:'middle'}}>
+      return (
+        <Layout className="layout">
+          <Header className="header-bar">
+            <div className="logo" style={{color:'#FAEEDC', textAlign:'left',float:'left'}}>
+              <Title className="header-bar-title" level={2}>
+                 Byte Size Arxiv
+              </Title>
+            </div>
+            <div className="header-bar-menu">
+              <Button className="home-button" size='large' href='/'>
+                Home
+              </Button>
+              <Button className="bsa-button" size='large' href = '/B.S.A.'>
+                B.S.A.
+              </Button>
+              <Button
+                size={'large'}
+                onClick={() => this.gotoLink('news')}
+                style={{marginLeft:'15px'}}
+                type='secondary'
+              >
+               Newsletter
+              </Button>
+             </div>
+          </Header>
+          <div className="Body" style={{whiteSpace: 'pre-wrap', overflowWrap: 'break-word', color:'#FAEEDC', textAlign:'left',float:'middle'}}>
             <Content style={{color:'#323030', backgroundColor:'white', padding: '0 50px' ,margin:'60px 0', marginLeft:'5em', marginRight:'5em'}}>
-
-
               <Row style={{ paddingTop:'5em', margin:'30px 0'}}>
               <Col span={9} style={{fontsize:'100',paddingLeft:'0 0px', textAlign:'left', paddingTop:'.5em'}} >
 
-                  <Row style={{paddingTop:'1em'}}>
-                  <Title level={1} className="sample-class">
-                      Welcome to Byte Size Arxiv
-                  </Title>
-                  </Row>
-                  <Row style={{paddingTop:'1em'}}>
-                   <Title level={4} style={{color:'black'}}>
-                      We are on a mission to make it easy for you to stay up to date with cutting edge research being shared on Arxiv.org.
-                  </Title>
-                  </Row>
-                  <Row style={{paddingTop:'1em'}}>
-                      <Title level={4} style={{color:'black'}}>
-                      To get started, click the button below and select a category to browse
-                      Byte-Size summaries of brand new publications are made daily using Machine Learning.
-                  </Title>
-                  </Row>
-                  <Row style={{paddingLeft:'5em',paddingTop:'2em'}}>
-                  <Button
-                      variant='outlined' href='/B.S.A.'>
-                      Try Byte Size Arxiv
-                  </Button>
-                  </Row>
-              </Col>
-              <Col span={1} style={{paddingLeft:'18em', textAlign:'right', paddingBottom:'2em'}}>
-              <img height='350px' width='' src={require('../assets/BSA_Logo.png')}/>
-              </Col>
-              </Row>
-                  <Row>
-                      <Col span={24} style={{textAlign:'center', paddingTop:'3em', padding:'2em'}}>
-                      <Title level={1} style={{color:'black'}}>
-                      Building B.S.A.
-                      </Title>
-                      </Col>
-                    </Row>
-
-                  <Row>
-                    <Col span={11} style={{paddingLeft:'8em', textAlign:'left'}}>
-                    <img height='500px' width='' src={require('../assets/BSA.gif')}/>
-                    </Col>
-                    <Col span={12} style={{paddingLeft:'8em', textAlign:'left', paddingTop:'3em', paddingRight:'1em'}} >
+                <Row style={{paddingTop:'1em'}}>
+                <Title level={1} className="sample-class">
+                    Welcome to Byte Size Arxiv
+                </Title>
+                </Row>
+                <Row style={{paddingTop:'1em'}}>
+                 <Title level={4} style={{color:'black'}}>
+                    We are on a mission to make it easy for you to stay up to date with cutting edge research being shared on Arxiv.org.
+                </Title>
+                </Row>
+                <Row style={{paddingTop:'1em'}}>
                     <Title level={4} style={{color:'black'}}>
-                        Everyday there are hundreds of peer-reviewed academic papers filled with cutting edge research being uploaded to Cornell's Arxiv.org. Byte Size Arxiv takes the articles as they are uploaded and isolates three key sentences in the abstract for a quickly digestible summary.
-                        This is done using term frequency–inverse document frequency (TF-IDF), a machine learning model.
+                    To get started, click the button below and select a category to browse
+                    Byte-Size summaries of brand new publications are made daily using Machine Learning.
+                </Title>
+                </Row>
+                <Row style={{paddingLeft:'5em',paddingTop:'2em'}}>
+                <Button
+                    variant='outlined' href='/B.S.A.'>
+                    Try Byte Size Arxiv
+                </Button>
+                </Row>
+            </Col>
+            <Col span={1} style={{paddingLeft:'18em', textAlign:'right', paddingBottom:'2em'}}>
+            <img height='350px' width='' src={require('../assets/BSA_Logo.png')}/>
+            </Col>
+            </Row>
+                <Row>
+                    <Col span={24} style={{textAlign:'center', paddingTop:'3em', padding:'2em'}}>
+                    <Title level={1} style={{color:'black'}}>
+                    Building B.S.A.
                     </Title>
-                    <Title level={4} style={{colo:'black'}}>
-                        The model
-                        creates a score for each word (ignoring stopwords). If a given word appears frequently in the abstract it’s score goes up. However, if the word is also common amongst other articles, the score goes down.
-                        The words with the highest scores are the most import words unique to the article in question!
-                    </Title>
-                        <Row style={{paddingTop:'1em'}}>
-                            <Title level={4} style={{color:'black'}}>
-                     Our goal is to spread this valuable knowledge by sharing key themes at a glance. Please reach out with any questions, concerns or opportunities. We would love to chat!
-                            </Title>
-                        </Row>
                     </Col>
                   </Row>
-                  <Row>
-                      <Col span={24} style={{textAlign:'center', paddingTop:'2em'}}>
-                     <Title level={1} style={{color:'black', paddingBottom:'1em'}}>
-                      About the Founders
+
+                <Row>
+                  <Col span={11} style={{paddingLeft:'8em', textAlign:'left'}}>
+                  <img height='500px' width='' src={require('../assets/BSA.gif')}/>
+                  </Col>
+                  <Col span={12} style={{paddingLeft:'8em', textAlign:'left', paddingTop:'3em', paddingRight:'1em'}} >
+                  <Title level={4} style={{color:'black'}}>
+                      Everyday there are hundreds of peer-reviewed academic papers filled with cutting edge research being uploaded to Cornell's Arxiv.org. Byte Size Arxiv takes the articles as they are uploaded and isolates three key sentences in the abstract for a quickly digestible summary.
+                      This is done using term frequency–inverse document frequency (TF-IDF), a machine learning model.
                   </Title>
-                          </Col>
-                    </Row>
-               <Row style={{margin:'2em 0'}}>
-                   <a href="https://www.linkedin.com/in/alex-d/">
-              <Col span={6} style={{paddingLeft:'20em'}}>
-              <img height='300px' width='' src={require('../assets/duffy.jpg')}/>
-              </Col>
-                </a>
-              <Col span={11}  style={{paddingTop:'.5em', paddingLeft:'7em', textAlign:'left', paddingBottom:'2em' }}>
-                  <Title level={2}>
-                      Alex Duffy
+                  <Title level={4} style={{colo:'black'}}>
+                      The model
+                      creates a score for each word (ignoring stopwords). If a given word appears frequently in the abstract it’s score goes up. However, if the word is also common amongst other articles, the score goes down.
+                      The words with the highest scores are the most import words unique to the article in question!
                   </Title>
-                  <Title level={4}>
-                    Hi, I'm Alex! I currently work at EY as a Data and Analytics Consultant and am based out of Los Angeles, CA. Prior to EY, I've been lucky to have spent time at Amazon Robotics, Hasbro, ENSEEIHT in France, and MathTree
-                    as an engineer, designer, researcher, and instructor.
-                   </Title>
-                   <Title level={4}>
-                    Ambiguous problems excite me - I'm curious about building for technical progress in society, particularly how to improve our approach to education.
-                    Education is especially important as it is a required tool for chasing dreams.
-                   </Title>
-                   <Title level={4}>
-                    Alex received his B.S. in Electrical and Computer Engineering from Northeastern University.
-                   </Title>
-                   <Title level={4}>
-                    Get in touch : alx.dfy@gmail.com
-                   </Title>
-              </Col>
-               </Row>
-                             <Row style={{margin:'2em 0'}}>
-                   <a href="http://linkedin.com/in/neerajsudhakar">
-              <Col span={6} style={{paddingLeft:'20em'}}>
-              <img height='400px' width='' src={require('../assets/neeraj.JPG')}/>
-              </Col>
-                </a>
-              <Col span={11}  style={{paddingTop:'.5em', paddingLeft:'7em', textAlign:'left' , paddingBottom:'2em' }}>
-                  <Title level={2}>
-                      Neeraj Sudhakar
-                  </Title>
-                  <Title level={4}>
-                    Hi, I'm Neeraj Sudhakar! Over the past few years I have had the opportunity to work at Kumon,
-                      Wealth Planning Asset Management, Vertex Pharmaceuticals and Mersana Therapeutics as a tutor, quantitative analyst, researcher and process optimization engineer.
-                   </Title>
-                  <Title level={4}>
-                      Analytical problem solving while leveraging the power of computing and Machine Learning is of special interest to me. I hope to continute this passion in the financial services industry
-                      to deliver unique, timely solutions.
-                   </Title>
-                   <Title level={4}>
-                    Neeraj is currently in his final year as a combined BS Chemical Engineering/MS Engineering Management candidate.
-                   </Title>
-                   <Title level={4}>
-                    Get in touch : sudhakarneeraj@gmail.com
-                   </Title>
-              </Col>
-               </Row>
-            </Content>
-          </div>
+                      <Row style={{paddingTop:'1em'}}>
+                          <Title level={4} style={{color:'black'}}>
+                   Our goal is to spread this valuable knowledge by sharing key themes at a glance. Please reach out with any questions, concerns or opportunities. We would love to chat!
+                          </Title>
+                      </Row>
+                  </Col>
+                </Row>
+                <Row>
+                    <Col span={24} style={{textAlign:'center', paddingTop:'2em'}}>
+                   <Title level={1} style={{color:'black', paddingBottom:'1em'}}>
+                    About the Founders
+                </Title>
+                        </Col>
+                  </Row>
+             <Row style={{margin:'2em 0'}}>
+                 <a href="https://www.linkedin.com/in/alex-d/">
+            <Col span={6} style={{paddingLeft:'20em'}}>
+            <img height='300px' width='' src={require('../assets/duffy.jpg')}/>
+            </Col>
+              </a>
+            <Col span={11}  style={{paddingTop:'.5em', paddingLeft:'7em', textAlign:'left', paddingBottom:'2em' }}>
+                <Title level={2}>
+                    Alex Duffy
+                </Title>
+                <Title level={4}>
+                  Hi, I'm Alex! I currently work at EY as a Data and Analytics Consultant and am based out of Los Angeles, CA. Prior to EY, I've been lucky to have spent time at Amazon Robotics, Hasbro, ENSEEIHT in France, and MathTree
+                  as an engineer, designer, researcher, and instructor.
+                 </Title>
+                 <Title level={4}>
+                  Ambiguous problems excite me - I'm curious about building for technical progress in society, particularly how to improve our approach to education.
+                  Education is especially important as it is a required tool for chasing dreams.
+                 </Title>
+                 <Title level={4}>
+                  Alex received his B.S. in Electrical and Computer Engineering from Northeastern University.
+                 </Title>
+                 <Title level={4}>
+                  Get in touch : alx.dfy@gmail.com
+                 </Title>
+            </Col>
+             </Row>
+                           <Row style={{margin:'2em 0'}}>
+                 <a href="http://linkedin.com/in/neerajsudhakar">
+            <Col span={6} style={{paddingLeft:'20em'}}>
+            <img height='400px' width='' src={require('../assets/neeraj.JPG')}/>
+            </Col>
+              </a>
+            <Col span={11}  style={{paddingTop:'.5em', paddingLeft:'7em', textAlign:'left' , paddingBottom:'2em' }}>
+                <Title level={2}>
+                    Neeraj Sudhakar
+                </Title>
+                <Title level={4}>
+                  Hi, I'm Neeraj Sudhakar! Over the past few years I have had the opportunity to work at Kumon,
+                    Wealth Planning Asset Management, Vertex Pharmaceuticals and Mersana Therapeutics as a tutor, quantitative analyst, researcher and process optimization engineer.
+                 </Title>
+                <Title level={4}>
+                    Analytical problem solving while leveraging the power of computing and Machine Learning is of special interest to me. I hope to continute this passion in the financial services industry
+                    to deliver unique, timely solutions.
+                 </Title>
+                 <Title level={4}>
+                  Neeraj is currently in his final year as a combined BS Chemical Engineering/MS Engineering Management candidate.
+                 </Title>
+                 <Title level={4}>
+                  Get in touch : sudhakarneeraj@gmail.com
+                 </Title>
+            </Col>
+             </Row>
+          </Content>
+        </div>
 
-            <Footer id='news' style={{backgroundColor:'black', textAlign: 'left' }}>
-          <Title level={3}>Interested in a Weekly Digest?</Title>
-                Sign up for our Waitlist
-          <Form name='myform' onFinish={this.onFinish}>
-          <Form.Item name='email'>
-          <Input
+          <Footer id='news' style={{backgroundColor:'black', textAlign: 'left' }}>
+        <Title level={3}>Interested in a Weekly Digest?</Title>
+              Sign up for our Waitlist
+        <Form name='myform' onFinish={this.onFinish}>
+        <Form.Item name='email'>
+        <Input
 
-          style={{margin: '0 auto',width:'200px'}}
-          placeholder="Enter Email to be Notified of Newsletter" />
+        style={{margin: '0 auto',width:'200px'}}
+        placeholder="Enter Email to be Notified of Newsletter" />
 
-          </Form.Item>
-          <Button
-          type="primary"
-          htmlType="submit">
-          Submit
-        </Button>
-          </Form>
-
-          </Footer>
-
-          </Layout>
-
-         );
+        </Form.Item>
+        <Button
+        type="primary"
+        htmlType="submit">
+        Submit
+      </Button>
+        </Form>
+        </Footer>
+    </Layout>
+       );
     }
 }
 
