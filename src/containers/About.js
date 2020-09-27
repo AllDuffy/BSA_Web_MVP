@@ -101,58 +101,32 @@ class About extends Component {
                 </Title>
                         </Col>
                   </Row>
-             <Row style={{margin:'2em 0'}}>
-                 <a href="https://www.linkedin.com/in/alex-d/">
-            <Col span={6} style={{paddingLeft:'20em'}}>
-            <img height='300px' width='' src={require('../assets/duffy.jpg')}/>
-            </Col>
-              </a>
-            <Col span={11}  style={{paddingTop:'.5em', paddingLeft:'7em', textAlign:'left', paddingBottom:'2em' }}>
-                <Title level={2}>
-                    Alex Duffy
-                </Title>
-                <Title level={4}>
-                  Hi, I'm Alex! I currently work at EY as a Data and Analytics Consultant and am based out of Los Angeles, CA. Prior to EY, I've been lucky to have spent time at Amazon Robotics, Hasbro, ENSEEIHT in France, and MathTree
-                  as an engineer, designer, researcher, and instructor.
-                 </Title>
-                 <Title level={4}>
-                  Ambiguous problems excite me - I'm curious about building for technical progress in society, particularly how to improve our approach to education.
-                  Education is especially important as it is a required tool for chasing dreams.
-                 </Title>
-                 <Title level={4}>
-                  Alex received his B.S. in Electrical and Computer Engineering from Northeastern University.
-                 </Title>
-                 <Title level={4}>
-                  Get in touch : alx.dfy@gmail.com
-                 </Title>
-            </Col>
-             </Row>
-                           <Row style={{margin:'2em 0'}}>
-                 <a href="http://linkedin.com/in/neerajsudhakar">
-            <Col span={6} style={{paddingLeft:'20em'}}>
-            <img height='400px' width='' src={require('../assets/neeraj.JPG')}/>
-            </Col>
-              </a>
-            <Col span={11}  style={{paddingTop:'.5em', paddingLeft:'7em', textAlign:'left' , paddingBottom:'2em' }}>
-                <Title level={2}>
-                    Neeraj Sudhakar
-                </Title>
-                <Title level={4}>
-                  Hi, I'm Neeraj Sudhakar! Over the past few years I have had the opportunity to work at Kumon,
-                    Wealth Planning Asset Management, Vertex Pharmaceuticals and Mersana Therapeutics as a tutor, quantitative analyst, researcher and process optimization engineer.
-                 </Title>
-                <Title level={4}>
-                    Analytical problem solving while leveraging the power of computing and Machine Learning is of special interest to me. I hope to continute this passion in the financial services industry
-                    to deliver unique, timely solutions.
-                 </Title>
-                 <Title level={4}>
-                  Neeraj is currently in his final year as a combined BS Chemical Engineering/MS Engineering Management candidate.
-                 </Title>
-                 <Title level={4}>
-                  Get in touch : sudhakarneeraj@gmail.com
-                 </Title>
-            </Col>
-             </Row>
+             <div className="founders">
+               <div className="duffy">
+                 <div className="duffy-image">
+                   <img src={require('../assets/duffy.jpg')}/>
+                 </div>
+                 <div className="duffy-text-content">
+                   <h1>Alex Duffy</h1>
+                   <h4>Hi, I'm Alex! I currently work at EY as a Data and Analytics Consultant and am based out of Los Angeles, CA. Prior to EY, I've been lucky to have spent time at Amazon Robotics, Hasbro, ENSEEIHT in France, and MathTree as an engineer, designer, researcher, and instructor.</h4>
+                   <h4>Ambiguous problems excite me - I'm curious about building for technical progress in society, particularly how to improve our approach to education.Education is especially important as it is a required tool for chasing dreams.</h4>
+                   <h4>Alex received his B.S. in Electrical and Computer Engineering from Northeastern University.</h4>
+                   <h4>Get in touch: alx.dfy@gmail.com</h4>
+                 </div>
+               </div>
+               <div className="neeraj">
+                 <div className="neeraj-image">
+                   <img height='400px' width='' src={require('../assets/neeraj.JPG')}/>
+                 </div>
+                 <div className="neeraj-text-content">
+                  <h1>Neeraj Sudhakar</h1>
+                  <h4>Hi, I'm Neeraj Sudhakar! Over the past few years I have had the opportunity to work at Kumon,Wealth Planning Asset Management, Vertex Pharmaceuticals and Mersana Therapeutics as a tutor, quantitative analyst, researcher and process optimization engineer.</h4>
+                  <h4>Analytical problem solving while leveraging the power of computing and Machine Learning is of special interest to me. I hope to continute this passion in the financial services industry to deliver unique, timely solutions.</h4>
+                  <h4>Neeraj is currently in his final year as a combined BS Chemical Engineering/MS Engineering Management candidate. </h4>
+                  <h4>Get in touch: sudhakarneeraj@gmail.com</h4>
+                 </div>
+               </div>
+             </div>
           </Content>
         </div>
 
