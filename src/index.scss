@@ -15,13 +15,15 @@ code {
 .ant-layout {
   min-height: 100vh !important;
 }
+
 .ant-layout-footer {
-  color: rgba(255, 0, 0);
+  //color: rgba(255, 0, 0);
   font-size: 14px;
   background: #fff !important;
   padding: 40px !important;
   margin-top: 30px;
 }
+
 .ant-layout-sider-children .ant-menu-root  {
 max-height: 100vh;
 overflow-y: auto;
