@@ -34,6 +34,7 @@
 .summary {
   display: flex;
   flex-direction: row;
+  flex-wrap: wrap;
   align-items: center;
   justify-content: space-evenly;
   // TODO: Implement flex grow/shrink/basis here
@@ -75,6 +76,7 @@
 .building-bsa-content {
   display: flex;
   flex-direction: row;
+  flex-wrap: wrap;
   align-items: center;
   justify-content: space-evenly;
   color: black !important;
@@ -98,6 +100,7 @@
 .founders {
   display: flex;
   flex-direction: row;
+  flex-wrap: wrap;
   align-items: center;
   justify-content: space-evenly;
   color: black !important;
@@ -107,7 +110,7 @@
     display: flex;
     flex-direction: row;
     justify-content: center;
-    width: 50%;
+    width: 800px;
 
     .duffy-image {
       padding: 40px 0px;
@@ -130,7 +133,7 @@
     display: flex;
     flex-direction: row;
     justify-content: center;
-    width: 50%;
+    width: 800px;
 
     .neeraj-image {
       padding: 40px 0px;
