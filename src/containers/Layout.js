@@ -189,10 +189,11 @@ class CustomLayout extends Component {
     const resume = articles.map((items, i) => {
       return (
          <SubMenu title={items[0]}>
-         {items[1].map((deal, idx) =>
-         <Menu.Item
-         onClick={() => this.getArticle(deal.slug)}   
-        >{deal.category}</Menu.Item>  
+          {items[1].map((deal, idx) =>
+            <Menu.Item
+              onClick={() => this.getArticle(deal.slug)}   
+              >{deal.category}
+            </Menu.Item>  
           )}                      
         </SubMenu>
       )
@@ -200,32 +201,25 @@ class CustomLayout extends Component {
     return ( 
       <Spin spinning={this.state.loading}>  
    
-      <Layout>
-      <Header className="header" style={{backgroundColor:'#FAEEDC'}}>
-        <div className="logo" style={{color:'#FAEEDC', textAlign:'left',float:'left'}}>
-         <Title level={2} style={{marginLeft:'2.2em', color:'black', paddingTop:'10px'}}>
-             Byte Size Arxiv
-         </Title>
+      <Layout classname="header">
+      <Header className="header-bar">
+        <div className="header-bar-logo">
+          <Title className="header-bar-title" level={2}> Byte Size Arxiv </Title>
         </div>
-        <div style={{textAlign:'right', paddingRight:'6.1em'}}>
-
-          <Button size='large' href='/'>
-          Home
+        <div className="header-bar-menu">
+          <Button className="home-button" size='large' href='/'> Home </Button>
+          <Button className="bsa-button" size='large' href = '/B.S.A.'> B.S.A. </Button>
+          <Button
+            className="newsletter-button"
+            size='large'
+            onClick={() => this.gotoLink('news')}
+            type='secondary'
+          >
+            Newsletter
           </Button>
-          <Button size='large'
-              style={{marginLeft:'15px'}}
-         href = '/B.S.A.'>
-          B.S.A.
-          </Button>
-          <Button size={'large'}
-           onClick={() => this.gotoLink('news')}
-           style={{marginLeft:'15px'}}
-          type='secondary'>
-           Newsletter
-          </Button>
-         </div>
+          </div>
       </Header>
-      <Layout style={{marginTop:'60px'}}>
+      <Layout className='bsa' style={{marginTop:'60px'}}>
         <Sider width={400}
             style={{
               overflow: 'auto',
