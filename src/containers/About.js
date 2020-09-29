@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Layout, Menu, Breadcrumb,Row,Col,Typography,Form,Input} from 'antd';
+import { Layout, Drawer, Menu, Breadcrumb,Row,Col,Typography,Form,Input} from 'antd';
 import { Link } from "react-router-dom";
 import { makeStyles } from '@material-ui/core/styles';
 import Button from '@material-ui/core/Button';
@@ -32,6 +32,20 @@ class About extends Component {
             behavior: "smooth"
         });
     }
+    state = {
+      current: 'mail',
+      visible: false
+    }
+    showDrawer = () => {
+      this.setState({
+        visible: true,
+      });
+    };
+  onClose = () => {
+      this.setState({
+        visible: false,
+      });
+    };
     render() {
       return (
         <Layout className="layout">
