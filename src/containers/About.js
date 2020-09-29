@@ -130,7 +130,7 @@ class About extends Component {
                </div>
                <div className="neeraj">
                  <div className="neeraj-image">
-                   <img height='400px' width='' src={require('../assets/neeraj.JPG')}/>
+                   <img height='300px' width='' src={require('../assets/neeraj.JPG')}/>
                  </div>
                  <div className="neeraj-text-content">
                   <h1>Neeraj Sudhakar</h1>
