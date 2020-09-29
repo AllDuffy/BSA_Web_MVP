@@ -59,6 +59,7 @@
   .summary-image {
     padding: 40px;
     height: 400px;
+    min-width: 200px;
 
     img {
       max-width: 100%;
@@ -82,11 +83,13 @@
   color: black !important;
 
   .building-bsa-text {
+    //flex-grow: 5;
     width: 500px;
     padding: 10px 0px;
   }
 
   .building-bsa-image {
+    //flex-grow: 4;
     padding: 40px 0px;
     height: 500px;
 
@@ -109,12 +112,15 @@
   .duffy {
     display: flex;
     flex-direction: row;
+    flex-wrap: wrap;
     justify-content: center;
-    width: 800px;
+    width: 80%;
 
     .duffy-image {
       padding: 40px 0px;
       width: 40%;
+      max-width: 300px;
+      min-width: 200px;
       img {
         max-width: 100%;
         max-height: 100%;
@@ -123,6 +129,7 @@
     }
 
     .duffy-text-content {
+      min-width: 300px;
       width: 60%;
       padding: 40px;
     }
@@ -132,12 +139,15 @@
   .neeraj {
     display: flex;
     flex-direction: row;
+    flex-wrap: wrap;
     justify-content: center;
-    width: 800px;
+    width: 80%;
 
     .neeraj-image {
       padding: 40px 0px;
       width: 40%;
+      min-width: 200px;
+      max-width: 300px;
       img {
         max-width: 100%;
         max-height: 100%;
@@ -146,9 +156,11 @@
     }
 
     .neeraj-text-content {
+      min-width: 300px;
       width: 60%;
-      padding-top: 40px;
+      padding: 40px;
     }
+
   }
 }
 
