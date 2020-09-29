@@ -23,7 +23,7 @@ class CustomLayout extends Component {
         articles:[],
         selectedSlug:'',
         selectedDate:'',
-        articleData:[['', [{'category_id': '', 'date': '', 'id': 1, 'link': '', 'sentence': {}, 'title': ''}]]],
+        articleData:[],
         loading:false,
         dateArray:[],
         dateState:''
@@ -39,8 +39,7 @@ class CustomLayout extends Component {
     } 
     console.log('dateArray',dateArray)
 
-
-    const url = 'http://127.0.0.1:8000/get_stored_categories';
+    const url = 'https://bsa-web.herokuapp.com/get_stored_categories';
     const response = await fetch(url , {
     method: 'GET',
     headers: {
@@ -72,7 +71,7 @@ class CustomLayout extends Component {
       recent:'true',
       date:''
     }
-    const url = 'http://127.0.0.1:8000/get_articles';
+     const url = 'https://bsa-web.herokuapp.com/get_articles';
     const response = await fetch(url , {
     method: 'POST',
     headers: {
@@ -121,7 +120,7 @@ class CustomLayout extends Component {
       recent:'false',
       date:this.state.selectedDate
     }
-    const url = 'http://127.0.0.1:8000/get_articles';
+    const url = 'https://bsa-web.herokuapp.com/get_articles';
     const response = await fetch(url , {
     method: 'POST',
     headers: {
@@ -162,7 +161,7 @@ class CustomLayout extends Component {
 
   async onFinish (values) {
     console.log(values);
-    const url = 'http://127.0.0.1:8000/store_email';
+    const url = 'https://bsa-web.herokuapp.com/store_email';
     const response = await fetch(url , {
     method: 'POST',
     headers: {
