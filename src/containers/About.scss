@@ -162,6 +162,35 @@
     }
 
   }
+  .abdullah {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    width: 80%;
+
+    .abdullah-image {
+      padding: 40px 0px;
+      width: 40%;
+      min-width: 200px;
+      max-width: 300px;
+      img {
+        max-width: 100%;
+        max-height: 100%;
+        border-radius: 20px;
+      }
+    }
+
+    .abdullah-text-content {
+      min-width: 300px;
+      width: 60%;
+      padding: 40px;
+    }
+
+    .abdullah-button{
+      background: '#faeedc'
+    }
+  }
 }
 
 

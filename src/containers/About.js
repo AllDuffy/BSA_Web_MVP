@@ -140,21 +140,20 @@ class About extends Component {
                   <h4>Get in touch: sudhakarneeraj@gmail.com</h4>
                  </div>
                </div>
-               <div className="neeraj">
-                 <div className="neeraj-image">
+               <div className="abdullah">
+                 <div className="abdullah-image">
                    <img height='300px' width='' src={require('../assets/abdullah.PNG')}/>
                  </div>
-                 <div className="neeraj-text-content">
+                 <div className="abdullah-text-content">
                   <h1>Abdullah Chaudhry</h1>
-                  <h4>Special thanks to: Abdullah for helping bring the vision to life by doing the preliminary development you can find his portfolio here.</h4>
+                  <h4>Special thanks to: Abdullah for helping bring the vision to life by doing the preliminary web development you can find his portfolio here.</h4>
                   
                   <h4>Get in touch: AbdullahAfzal2121@gmail.com
                     <br/>
                     Whatsapp: +923457772878
                   </h4>
                   <a href='https://www.fiverr.com/dextersol/do-django-python-react-javascript-projects-and-programs' target='blank'>
-                <Button
-                style={{background:'#faeedc'}}
+                <Button classname ="abdullah-button"
                 type='primary'
               >
                Portfolio
