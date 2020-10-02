@@ -76,3 +76,63 @@ overflow-y: auto;
   ::-webkit-scrollbar-thumb:horizontal:hover {
       background: #cccccc;
   }
+.ant-layout-sider-collapsed{
+  width: 0px !important;
+  min-width: 0px !important;
+}
+.ant-layout-sider{
+  z-index: 999 !important;
+}
+
+  @media screen and (max-width: 768px) {
+  .header-bar .header-bar-title {
+    margin-left: 10px !important;
+    padding-top: 10px !important;
+    font-size: 16px !important;
+}
+.ant-layout-header {
+  height: 64px;
+  padding: 0 10px !important;
+  line-height: 1.2px !important;
+}
+.header-bar .header-bar-menu {
+  padding-right: 10px !important;
+}
+.header-bar .header-bar-menu .bsa-button {
+  margin-left: 15px !important;
+  font-size: 12px;
+  padding: 5px;
+  line-height: 1;
+}
+.header-bar .header-bar-menu .newsletter-button {
+  margin-left: 0px !important;
+  font-size: 12px !important;
+  padding: 5px !important;
+}
+.MuiButton-textSizeLarge {
+  padding: 5px !important;
+  font-size: 12px !important;
+}
+.ant-layout-content{
+  margin: 60px 1em !important;
+}
+.ant-layout{
+  margin-left: 0px !important;
+}
+.ant-layout-sider{
+  max-width: 200px;
+  min-width: 200px;
+  width: 200px;
+}
+.ant-layout-content{
+  padding: 0 !important;
+}
+.header-bar .header-bar-logo {
+  color: #FAEEDC !important;
+  text-align: left !important;
+  float: unset !important;
+}
+.header-bar .header-bar-menu {
+  text-align: center !important;
+}
+}

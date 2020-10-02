@@ -9,17 +9,17 @@
   .header-bar-logo {
     color: #FAEEDC !important;
     text-align: left !important;
-    float: left !important;
+    float: left;
   }
 
   .header-bar-title {
-    margin-left: 2.2em !important;
+    margin-left: 2.2em;
     padding-top: 10px !important;
   }
 
   .header-bar-menu {
-    text-align: right !important;
-    padding-right: 6.1em !important;
+    text-align: right;
+    padding-right: 6.1em;
 
     .bsa-button {
       margin-left: 15px !important;

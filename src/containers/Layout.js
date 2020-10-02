@@ -10,6 +10,13 @@ import { Link } from "react-router-dom";
 import axios from "axios";
 import * as moment from 'moment'
 
+import {
+  MenuUnfoldOutlined,
+  MenuFoldOutlined,
+  VideoCameraOutlined,
+  UploadOutlined,
+} from '@ant-design/icons';
+
 
 const { SubMenu } = Menu;
 const { Header, Content, Sider, Footer } = Layout;
@@ -17,6 +24,9 @@ const { Option } = Select;
 const { Title } = Typography;
 
 class CustomLayout extends Component {
+  state = {
+    collapsed: false,
+  };
   constructor(props){ 
     super(props);
     this.state = {
@@ -29,6 +39,15 @@ class CustomLayout extends Component {
         dateState:''
     }
   }
+
+
+
+
+  toggle = () => {
+    this.setState({
+      collapsed: !this.state.collapsed,
+    });
+  };
 
   async componentDidMount() {
     const { dateArray } = this.state;
@@ -199,11 +218,19 @@ class CustomLayout extends Component {
     });
     return ( 
       <Spin spinning={this.state.loading}>  
-   
+
       <Layout classname="header">
       <Header className="header-bar">
         <div className="header-bar-logo">
-          <Title className="header-bar-title" level={2}> Byte Size Arxiv </Title>
+          <Title className="header-bar-title" level={2}> 
+          <span style={{paddingRight:'20px'}}>
+          Byte Size Arxiv
+          </span>
+          {React.createElement(this.state.collapsed ? MenuUnfoldOutlined : MenuFoldOutlined, {
+          className: 'trigger',
+          onClick: this.toggle,
+        })}
+           </Title>
         </div>
         <div className="header-bar-menu">
           <Button className="home-button" size='large' href='/'> Home </Button>
@@ -219,7 +246,7 @@ class CustomLayout extends Component {
           </div>
       </Header>
       <Layout className='bsa' style={{marginTop:'60px'}}>
-        <Sider width={400}
+        <Sider  trigger={null} collapsible collapsed={this.state.collapsed} width={400}
             style={{
               overflow: 'auto',
               height: '100vh',
