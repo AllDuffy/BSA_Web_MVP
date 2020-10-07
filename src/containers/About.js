@@ -75,7 +75,7 @@ class About extends Component {
                        We are on a mission to make it easy for you to stay up to date with cutting edge research being shared on Arxiv.org.
                      </h3>
                      <h3 className="get-started-text">
-                      To get started, click the button below and select a category to browse Byte-Size summaries of brand new publications are made daily using Machine Learning.
+                      To get started, click the button below and select a category to browse Byte-Size summaries of brand new publications; made daily using Machine Learning.
                      </h3>
                       <div className="get-started-button">
                         <Button variant='outlined' href='/B.S.A.'> Try Byte Size Arxiv </Button>
