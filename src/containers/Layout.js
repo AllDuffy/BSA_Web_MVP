@@ -288,11 +288,11 @@ class CustomLayout extends Component {
           {items[1].map((ingredientsDeal, indx) =>
             <div style={{ margin:'0 0 30px 0'}}>
             <a target='_blank' href={ingredientsDeal.link == null ? '' : ingredientsDeal.link}>
-            <Title level={3}>{ingredientsDeal.title}  </Title>  
+            <h2 className = "paper_title">{ingredientsDeal.title}  </h2>  
             </a>
-            <ul style={{textTransform:'capitalize'}}>
+            <ul>
             {Object.values(ingredientsDeal.sentence).map((itemSentence, indxx) =>
-            <li> {itemSentence.sentence}</li> 
+            <li className ="bullets"> {itemSentence.sentence}</li> 
             )}      
            
             </ul>
