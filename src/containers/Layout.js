@@ -207,6 +207,10 @@ class CustomLayout extends Component {
     const resume = articles.map((items, i) => {
       return (
          <SubMenu title={items[0]}>
+          {React.createElement(this.state.collapsed ? MenuUnfoldOutlined : MenuFoldOutlined, {
+          className: 'trigger',
+          onClick: this.toggle,
+          })}
           {items[1].map((deal, idx) =>
             <Menu.Item
               onClick={() => this.getArticle(deal.slug)}   
@@ -222,14 +226,16 @@ class CustomLayout extends Component {
       <Layout classname="header">
       <Header className="header-bar">
         <div className="header-bar-logo">
-          <Title className="header-bar-title" level={2}> 
-          <span style={{paddingRight:'20px'}}>
-          Byte Size Arxiv
-          </span>
+          <Title className="header-bar-title" level={2}>
           {React.createElement(this.state.collapsed ? MenuUnfoldOutlined : MenuFoldOutlined, {
           className: 'trigger',
           onClick: this.toggle,
-        })}
+          })} 
+          <span style={{
+            paddingLeft:'5px',
+            paddingRight:'20px'}}>
+          Byte Size Arxiv
+          </span>
            </Title>
         </div>
         <div className="header-bar-menu">
