@@ -11,7 +11,7 @@ class About extends Component {
 
     async onFinish (values) {
         console.log(values);
-        const url = 'http://127.0.0.1:8000/store_email';
+        const url = 'https://bsa-web.herokuapp.com/store_email';
         const response = await fetch(url , {
         method: 'POST',
         headers: {

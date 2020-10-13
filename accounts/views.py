@@ -87,7 +87,7 @@ def prePro(text):
 def query(Category, category_obj):
 	base_url = 'http://export.arxiv.org/api/query?'
 	search_query = Category
-	query = 'search_query=%s&max_results=30&sortBy=submittedDate&sortOrder=descending' % (search_query)
+	query = 'search_query=%s&max_results=50&sortBy=submittedDate&sortOrder=descending' % (search_query)
 	feedparser._FeedParserMixin.namespaces['http://a9.com/-/spec/opensearch/1.1/'] = 'opensearch'
 	feedparser._FeedParserMixin.namespaces['http://arxiv.org/schemas/atom'] = 'arxiv'
 	with libreq.urlopen(base_url + query) as url:
@@ -117,7 +117,7 @@ def query(Category, category_obj):
 	# 			date = entry.published[0:10]
 	# 	if entry.published[0:10] == date:
 	# 		corpus_entry.append(entry)
-
+	#print ("test1")
 	for paper in corpus_entry:
 		paper.summary = prePro(paper.summary.lower())
 	stop_Words = stop_words.ENGLISH_STOP_WORDS
@@ -200,9 +200,18 @@ def query(Category, category_obj):
 			# 		print(sentence + "\n")
 			three_sentences[k] = {"sentence":sentence}
 			k += 1
-
+		#print ("test2")
+		all_authors= ""
+		for idx,author in enumerate(paper.authors):
+			if idx == 0:
+				all_authors = "Authors: "+str(author.name)
+			else:
+				all_authors = all_authors + ", " + str(author.name)
+		paper.author = all_authors
+		#print("test3")
+		print (all_authors)
 		obj, created = Articles.objects.get_or_create(link=paper.link, defaults={'title': paper.title, 'sentence': three_sentences,
-																				'category': category_obj, 'date': all_dates[d_i]})
+																				'category': category_obj, 'date': all_dates[d_i],'author': paper.author})
 		print('obj created ',created, ' date',all_dates[d_i])
 		d_i += 1
 

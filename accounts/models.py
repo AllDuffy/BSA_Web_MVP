@@ -27,6 +27,9 @@ class Articles(models.Model):
 	sentence = JSONField()
 	category = models.ForeignKey(Categories, on_delete=models.DO_NOTHING)
 	date = models.DateField()
+	author = models.CharField(max_length=200, null=True)
+
+
 	def __str__(self):
 		return self.category
 
