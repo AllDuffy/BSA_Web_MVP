@@ -11,7 +11,7 @@ class About extends Component {
 
     async onFinish (values) {
         console.log(values);
-        const url = 'https://bsa-web.herokuapp.com/store_email';
+        const url = 'www.bytesizearxiv.org/store_email';
         const response = await fetch(url , {
         method: 'POST',
         headers: {
