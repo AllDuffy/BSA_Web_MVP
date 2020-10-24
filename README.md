@@ -1,6 +1,7 @@
 https://www.bytesizearxiv.org
 
 Stay up to date on cutting edge research on ArXiv .org with byte size summaries of brand new publications auto generated using ML (TF-IDF).
+Newsletter coming soon
 
 Installation instructions:
   create and activate your virtual environment: 
