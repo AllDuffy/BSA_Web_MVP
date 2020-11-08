@@ -9,20 +9,38 @@ import renderEmpty from 'antd/lib/config-provider/renderEmpty';
 import ArticleList from './containers/ArticleListView';
 import CSLGList from './containers/CSLGListView';
 import axios from "axios";
+import Urls from './routes';
+import {connect} from 'react-redux';
+import * as actions from './Store/AuthActions';
 
-class App extends Component {
+function App(props) {
 
-  render() {
-    return (
-      <div className="App">
-        <Router>
+  // Similar to componentDidMount and componentDidUpdate:
+  React.useEffect(() => {
+    props.setAuthenticatedIfRequired();
+  }, []);
 
-            <BaseRouter />
+  return (
+    <div className="App">
+      <BaseRouter/>
+    </div>
+  );
+}
 
-        </Router>
-      </div>
-    );
+
+const mapStateToProps = (state) => {
+  return {
+    isAuthenticated: state.auth.token !== null && typeof state.auth.token !== 'undefined',
+    token: state.auth.token
   }
 }
 
-export default App;
+//This means that one or more of the redux actions in the form of dispatch(action) combinations are available as props
+const mapDispatchToProps = (dispatch) => {
+  return {
+    setAuthenticatedIfRequired: () => dispatch(actions.authCheckState()),
+    logout: () => dispatch(actions.authLogout())
+  }
+}
+
+export default connect(mapStateToProps, mapDispatchToProps)(App);

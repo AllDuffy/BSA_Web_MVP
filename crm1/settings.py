@@ -28,7 +28,7 @@ SECRET_KEY = 'cz=&%f*9(d*zo$_55p=(p)(eki#p$pb^0159-)8k^6$9c3l&_b'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['https://bytesizearxiv.org','http://bytesizearxiv.org', 'bsa-web.herokuapp.com', '127.0.0.1', 'www.bytesizearxiv.org', 'bytesizearxiv.org']
+ALLOWED_HOSTS = ['https://bytesizearxiv.org', 'http://bytesizearxiv.org', 'bsa-web.herokuapp.com', '127.0.0.1', 'www.bytesizearxiv.org', 'bytesizearxiv.org']
 
 
 # Application definition
@@ -44,6 +44,12 @@ INSTALLED_APPS = [
     'corsheaders',
     'accounts',
     'django_filters',
+    'rest_framework',
+    'rest_framework.authtoken',
+    'rest_auth',
+    'users',
+    'newsletter',
+'django.contrib.sites'
 ]
 
 MIDDLEWARE = [
