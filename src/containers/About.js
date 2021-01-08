@@ -11,7 +11,7 @@ class About extends Component {
 
     async onFinish (values) {
         console.log(values);
-        const url = 'www.bytesizearxiv.org/store_email';
+        const url = 'http://127.0.0.1:8000/store_email';
         const response = await fetch(url , {
         method: 'POST',
         headers: {
@@ -140,25 +140,13 @@ class About extends Component {
                   <h4>Get in touch: sudhakarneeraj@gmail.com</h4>
                  </div>
                </div>
-               <div className="abdullah">
-                 <div className="abdullah-image">
-                   <img height='300px' width='' src={require('../assets/abdullah.PNG')}/>
-                 </div>
-                 <div className="abdullah-text-content">
-                  <h1>Abdullah Chaudhry</h1>
-                  <h4>Special thanks to: Abdullah for helping bring the vision to life by doing the preliminary web development you can find his portfolio here.</h4>
-                  
-                  <h4>Get in touch: AbdullahAfzal2121@gmail.com
-                    <br/>
-                    Whatsapp: +923457772878
-                  </h4>
-                  <a href='https://www.fiverr.com/dextersol/do-django-python-react-javascript-projects-and-programs' target='blank'>
-                <Button classname ="abdullah-button"
-                type='primary'
-              >
-               Portfolio
-              </Button>
-              </a>
+               <div className="newsletter">
+                 <div className="newsletter-text-content">
+                  <h1>Our Weekly Digest is Now Available!</h1>
+                  <h4>Our weekly newsletter delivers 9 summarized articles across Computers and Society, Machine Learning and Computational Finance</h4>
+                     <h4>Please sign up at the bottom of the page and email us with any requests or concerns. We hope you enjoy!</h4>
+                     <h4>{" "}</h4>
+                     <h4>{" "}</h4>
                  </div>
                </div>
              </div>

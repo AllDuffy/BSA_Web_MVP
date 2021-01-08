@@ -130,5 +130,7 @@ USE_TZ = True
 
 MEDIA_URL = '/images/'
 
-
 CSRF_COOKIE_NAME = "XCSRF-TOKEN"
+
+FROM_EMAIL = 'sudhakarneeraj@gmail.com'
+SENDGRID_API_KEY = "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"
