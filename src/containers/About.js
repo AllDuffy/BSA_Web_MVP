@@ -141,14 +141,31 @@ class About extends Component {
                  </div>
                </div>
                <div className="newsletter">
+
                  <div className="newsletter-text-content">
+                     <Col span={24}>
                   <h1>Our Weekly Digest is Now Available!</h1>
                   <h4>Our weekly newsletter delivers 9 summarized articles across Computers and Society, Machine Learning and Computational Finance</h4>
                      <h4>Please sign up at the bottom of the page and email us with any requests or concerns. We hope you enjoy!</h4>
                      <h4>{" "}</h4>
                      <h4>{" "}</h4>
+                     </Col>
                  </div>
                </div>
+                 <div className="donate-content">
+                     <Col span={24}>
+                     <h4>Help us keep making great content and improving the site for your use. Please consider donating using the button below, we appreciate your help!</h4>
+                     <h4>{" "}</h4>
+                     <h4>{" "}</h4>
+                     </Col>
+                 </div>
+                 <div>
+                     <form action="https://www.paypal.com/donate" method="post" target="_top">
+                        <input type="hidden" name="hosted_button_id" value="SF5Z6C6X37EFU" />
+                        <input type="image" src="https://www.paypalobjects.com/en_US/i/btn/btn_donateCC_LG.gif" border="0" name="submit" title="PayPal - The safer, easier way to pay online!" alt="Donate with PayPal button" />
+                        <img alt="" border="0" src="https://www.paypal.com/en_US/i/scr/pixel.gif" width="1" height="1" />
+                    </form>
+                 </div>
              </div>
           </Content>
         </div>
