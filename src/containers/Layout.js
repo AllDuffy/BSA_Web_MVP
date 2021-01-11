@@ -58,7 +58,7 @@ class CustomLayout extends Component {
     } 
     console.log('dateArray',dateArray)
 
-    const url = 'www.bytesizearxiv.org/get_stored_categories';
+    const url = 'bytesizearxiv.org/get_stored_categories';
     const response = await fetch(url , {
     method: 'GET',
     headers: {
@@ -90,7 +90,7 @@ class CustomLayout extends Component {
       recent:'true',
       date:''
     }
-     const url = 'www.bytesizearxiv.org/get_articles';
+     const url = 'bytesizearxiv.org/get_articles';
     const response = await fetch(url , {
     method: 'POST',
     headers: {
@@ -139,7 +139,7 @@ class CustomLayout extends Component {
       recent:'false',
       date:this.state.selectedDate
     }
-    const url = 'www.bytesizearxiv.org/get_articles';
+    const url = 'bytesizearxiv.org/get_articles';
     const response = await fetch(url , {
     method: 'POST',
     headers: {
@@ -180,7 +180,7 @@ class CustomLayout extends Component {
 
   async onFinish (values) {
     console.log(values);
-    const url = 'www.bytesizearxiv.org/store_email';
+    const url = 'bytesizearxiv.org/store_email';
     const response = await fetch(url , {
     method: 'POST',
     headers: {

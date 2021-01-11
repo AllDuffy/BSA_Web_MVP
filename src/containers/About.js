@@ -11,7 +11,7 @@ class About extends Component {
 
     async onFinish (values) {
         console.log(values);
-        const url = 'www.bytesizearxiv.org/store_email';
+        const url = 'bytesizearxiv.org/store_email';
         const response = await fetch(url , {
         method: 'POST',
         headers: {
