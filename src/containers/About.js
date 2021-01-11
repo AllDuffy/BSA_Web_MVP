@@ -11,7 +11,7 @@ class About extends Component {
 
     async onFinish (values) {
         console.log(values);
-        const url = 'bytesizearxiv.org/store_email';
+        const url = 'https://bsa-web.herokuapp.com/store_email';
         const response = await fetch(url , {
         method: 'POST',
         headers: {
@@ -154,7 +154,7 @@ class About extends Component {
                </div>
                  <div className="donate-content">
                      <Col span={24}>
-                     <h4>Help us keep making great content and improving the site for your use. Please consider donating using the button below, we appreciate your help!</h4>
+                     <h4>Help us keep making great content and improving the site for your use. Con</h4>
                      <h4>{" "}</h4>
                      <h4>{" "}</h4>
                      </Col>

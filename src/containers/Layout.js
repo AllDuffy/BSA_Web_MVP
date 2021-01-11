@@ -58,23 +58,23 @@ class CustomLayout extends Component {
     } 
     console.log('dateArray',dateArray)
 
-    const url = 'bytesizearxiv.org/get_stored_categories';
+    const url = 'https://bsa-web.herokuapp.com/get_stored_categories';
     const response = await fetch(url , {
     method: 'GET',
     headers: {
       'Content-Type': 'application/json',
     }
     });
-    
+
     const res = await response.json();
-    
+
     var retval = Object.entries(res.articles)
     this.setState({
       articles:retval
   })
     console.log('hamza',res.articles);
     console.log('hamza',retval);
-  
+
   }
 
   async getArticle(slug){
@@ -90,11 +90,11 @@ class CustomLayout extends Component {
       recent:'true',
       date:''
     }
-     const url = 'bytesizearxiv.org/get_articles';
+     const url = 'https://bsa-web.herokuapp.com/get_articles';
     const response = await fetch(url , {
     method: 'POST',
     headers: {
-      'Content-Type': 'application/json', 
+      'Content-Type': 'application/json',
     },
     body:JSON.stringify(dataToBeSent),
     });
@@ -102,23 +102,23 @@ class CustomLayout extends Component {
     const articleResponse = Object.entries(retval);
     console.log('articleResponse my',articleResponse)
     console.log('articleResponse my retval',retval)
-    
+
     // var text_arr =[];
     // for(let k = 0 ; k < articleResponse.length ; k++){
     //   for(let i = 0 ; i < articleResponse[k] ; i++){
     //     text_arr[i] = articleResponse[k][i];
     //    }
-   
-    //  } 
+
+    //  }
     // console.log('asdasdasd',text_arr)
   //   for(let i = 0 ; i < articleResponse.articles.length ; i++){
   //     text_arr [i] = articleResponse.articles[i].sentence.split(",");
-  //    } 
+  //    }
 
-  // for(let i = 0 ; i < articleResponse.articles.length ; i++){  
+  // for(let i = 0 ; i < articleResponse.articles.length ; i++){
   //   articleResponse.articles[i].sortedData = text_arr[i]
-  // } 
-  
+  // }
+
     this.setState({
       articleData:articleResponse,
       loading:false,
@@ -139,7 +139,7 @@ class CustomLayout extends Component {
       recent:'false',
       date:this.state.selectedDate
     }
-    const url = 'bytesizearxiv.org/get_articles';
+    const url = 'https://bsa-web.herokuapp.com/get_articles';
     const response = await fetch(url , {
     method: 'POST',
     headers: {
@@ -147,19 +147,19 @@ class CustomLayout extends Component {
     },
     body:JSON.stringify(dataToBeSent),
     });
-    
+
     const articleResponse = await response.json();
     console.log(articleResponse);
     var text_arr =[];
     for(let i = 0 ; i < articleResponse.articles.length ; i++){
       text_arr [i] = articleResponse.articles[i].sentence.split(",");
-    
-      // articleResponse.articles.sample[i] = text_arr
-  } 
 
-  for(let i = 0 ; i < articleResponse.articles.length ; i++){  
+      // articleResponse.articles.sample[i] = text_arr
+  }
+
+  for(let i = 0 ; i < articleResponse.articles.length ; i++){
     articleResponse.articles[i].sortedData = text_arr[i]
-  } 
+  }
     // articleResponse.articles.sample = text_arr
     this.setState({
       articleData:articleResponse.articles,
@@ -169,7 +169,7 @@ class CustomLayout extends Component {
     console.log('MY ARTICLE',articleResponse)
     console.log('text_arr',text_arr)
   }
-  
+
 
   handleChange = (value) => {
     this.setState({
@@ -180,7 +180,7 @@ class CustomLayout extends Component {
 
   async onFinish (values) {
     console.log(values);
-    const url = 'bytesizearxiv.org/store_email';
+    const url = 'https://bsa-web.herokuapp.com/store_email';
     const response = await fetch(url , {
     method: 'POST',
     headers: {
