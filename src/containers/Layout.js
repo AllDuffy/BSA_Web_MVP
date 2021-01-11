@@ -234,7 +234,7 @@ class CustomLayout extends Component {
           <span style={{
             paddingLeft:'5px',
             paddingRight:'20px'}}>
-          Byte Size Arxiv
+          Byte Size ArXiv
           </span>
            </Title>
         </div>
@@ -316,13 +316,13 @@ class CustomLayout extends Component {
           <Footer id='news' style={{background:'black', textAlign: 'left' }}>
 
           <Title level={2}>Interested in a weekly digest?</Title>
-            Sign up for our waitlist
+            Sign up for our BSA Newsletter!
           <Form name='myform' onFinish={this.onFinish}>
           <Form.Item name='email'>
           <Input
 
           style={{margin: '0 auto',width:'200px'}}
-          placeholder="Email" />
+          placeholder="Enter Email to subscribe" />
 
           </Form.Item>
           <Button

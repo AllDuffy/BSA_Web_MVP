@@ -51,7 +51,7 @@ class About extends Component {
         <Layout className="layout">
           <Header className="header-bar">
             <div className="header-bar-logo">
-              <Title className="header-bar-title" level={2}> Byte Size Arxiv </Title>
+              <Title className="header-bar-title" level={2}> Byte Size ArXiv </Title>
             </div>
             <div className="header-bar-menu">
               <Button className="home-button" size='large' href='/'> Home </Button>
@@ -70,15 +70,15 @@ class About extends Component {
             <Content style={{color:'#323030', backgroundColor:'white', padding: '0 50px' ,margin:'60px 0', marginLeft:'5em', marginRight:'5em'}}>
                 <div className="summary">
                   <div className="summary-content">
-                     <Title className="summary-heading" level={1}>Welcome to Byte Size Arxiv</Title>
+                     <Title className="summary-heading" level={1}>Welcome to Byte Size ArXiv</Title>
                      <h3 className="summary-text">
-                       We are on a mission to make it easy for you to stay up to date with cutting edge research being shared on Arxiv.org.
+                       We are on a mission to make it easy for you to stay up to date with cutting edge research being shared on ArXiv.org.
                      </h3>
                      <h3 className="get-started-text">
                       To get started, click the button below and select a category to browse Byte-Size summaries of brand new publications; made daily using Machine Learning.
                      </h3>
                       <div className="get-started-button">
-                        <Button variant='outlined' href='/B.S.A.'> Try Byte Size Arxiv </Button>
+                        <Button variant='outlined' href='/B.S.A.'> Try Byte Size ArXiv </Button>
                       </div>
                   </div>
                   <div className="summary-image">
@@ -96,7 +96,7 @@ class About extends Component {
                   </div>
                   <div className="building-bsa-text">
                     <h3>
-                      Everyday there are hundreds of peer-reviewed academic papers filled with cutting edge research being uploaded to Cornell's Arxiv.org. Byte Size Arxiv takes the articles as they are uploaded and isolates three key sentences in the abstract for a quickly digestible summary.
+                      Everyday there are hundreds of peer-reviewed academic papers filled with cutting edge research being uploaded to Cornell's ArXiv.org. Byte Size ArXiv takes the articles as they are uploaded and isolates three key sentences in the abstract for a quickly digestible summary.
                       This is done using term frequency–inverse document frequency (TF-IDF), a machine learning model.
                     </h3>
                     <h3>
@@ -135,7 +135,7 @@ class About extends Component {
                  <div className="neeraj-text-content">
                   <h1>Neeraj Sudhakar</h1>
                   <h4>Hi, I'm Neeraj Sudhakar! Over the past few years I have had the opportunity to work at Kumon,Wealth Planning Asset Management, Vertex Pharmaceuticals and Mersana Therapeutics as a tutor, quantitative analyst, researcher and process optimization engineer.</h4>
-                  <h4>Analytical problem solving while leveraging the power of computing and Machine Learning is of special interest to me. I hope to continute this passion in the financial services industry to deliver unique, timely solutions.</h4>
+                  <h4>Analytical problem solving while leveraging the power of computing and Machine Learning is of special interest to me. I hope to continue this passion in the financial services industry to deliver unique, timely solutions.</h4>
                   <h4>Neeraj is currently in his final year as a combined BS Chemical Engineering/MS Engineering Management candidate. </h4>
                   <h4>Get in touch: sudhakarneeraj@gmail.com</h4>
                  </div>
@@ -145,8 +145,9 @@ class About extends Component {
                  <div className="newsletter-text-content">
                      <Col span={24}>
                   <h1>Our Weekly Digest is Now Available!</h1>
-                  <h4>Our weekly newsletter delivers 9 summarized articles across Computers and Society, Machine Learning and Computational Finance</h4>
+                  <h4>Version 1.0 of our weekly newsletter delivers nine summarized articles across the categories: Computers and Society (CS), Machine Learning (CS), and Computational Finance (Quant. Finance).</h4>
                      <h4>Please sign up at the bottom of the page and email us with any requests or concerns. We hope you enjoy!</h4>
+                         <h4>Please feel free to email us at digest@bytesizearxiv.org with any category suggestions or questions.</h4>
                      <h4>{" "}</h4>
                      <h4>{" "}</h4>
                      </Col>
@@ -154,7 +155,8 @@ class About extends Component {
                </div>
                  <div className="donate-content">
                      <Col span={24}>
-                     <h4>Help us keep making great content and improving the site for your use. Con</h4>
+                     <h4>Help us keep making great content and improving the site for your use. We are currently working on expanding functionality of the newsletter to allow you to pick your favorite categories.</h4>
+                         <h4>To support us in furthering our mission, please consider donating use the Paypal button below. Thanks you!.</h4>
                      <h4>{" "}</h4>
                      <h4>{" "}</h4>
                      </Col>
@@ -172,13 +174,13 @@ class About extends Component {
 
           <Footer id='news' style={{backgroundColor:'black', textAlign: 'left' }}>
         <Title level={3}>Interested in a Weekly Digest?</Title>
-              Sign up for our Waitlist
+              Sign up for our BSA Newsletter!
         <Form name='myform' onFinish={this.onFinish}>
         <Form.Item name='email'>
         <Input
 
         style={{margin: '0 auto',width:'200px'}}
-        placeholder="Enter Email to be Notified of Newsletter" />
+        placeholder="Enter Email to subscribe" />
 
         </Form.Item>
         <Button
