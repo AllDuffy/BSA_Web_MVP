@@ -146,8 +146,7 @@ class About extends Component {
                      <Col span={24}>
                   <h1>Our Weekly Digest is Now Available!</h1>
                   <h4>Version 1.0 of our weekly newsletter delivers nine summarized articles across the categories: Computers and Society (CS), Machine Learning (CS), and Computational Finance (Quant. Finance).</h4>
-                     <h4>Please sign up at the bottom of the page and email us with any requests or concerns. We hope you enjoy!</h4>
-                         <h4>Please feel free to email us at digest@bytesizearxiv.org with any category suggestions or questions.</h4>
+                     <h4>Please sign up at the bottom of the page and reach out to us with any category requests or concerns. We hope you enjoy!</h4>
                      <h4>{" "}</h4>
                      <h4>{" "}</h4>
                      </Col>
@@ -156,7 +155,7 @@ class About extends Component {
                  <div className="donate-content">
                      <Col span={24}>
                      <h4>Help us keep making great content and improving the site for your use. We are currently working on expanding functionality of the newsletter to allow you to pick your favorite categories.</h4>
-                         <h4>To support us in furthering our mission, please consider donating use the Paypal button below. Thanks you!.</h4>
+                         <h4>To support us in furthering our mission, please consider donating use the Paypal button below. Thank you!</h4>
                      <h4>{" "}</h4>
                      <h4>{" "}</h4>
                      </Col>
