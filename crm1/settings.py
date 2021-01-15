@@ -47,9 +47,8 @@ INSTALLED_APPS = [
 ]
 
 MIDDLEWARE = [
-    'django.middleware.security.SecurityMiddleware'
-    'corsheaders.middleware.CorsMiddleware',
     'django.middleware.security.SecurityMiddleware',
+    'corsheaders.middleware.CorsMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
     'django.middleware.csrf.CsrfViewMiddleware',
@@ -58,6 +57,9 @@ MIDDLEWARE = [
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
     'whitenoise.middleware.WhiteNoiseMiddleware',
 ]
+
+SECURE_PROXY_SSL_HEADER = ('HTTP_X_FORWARDED_PROTO', 'https')
+SECURE_SSL_REDIRECT = True
 
 ROOT_URLCONF = 'crm1.urls'
 CORS_ORIGIN_ALLOW_ALL = True
@@ -130,5 +132,4 @@ CSRF_COOKIE_NAME = "XCSRF-TOKEN"
 
 FROM_EMAIL = 'sudhakarneeraj@gmail.com'
 SENDGRID_API_KEY = "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"
-SECURE_PROXY_SSL_HEADER = ('HTTP_X_FORWARDED_PROTO', 'https')
-SECURE_SSL_REDIRECT = True
+
