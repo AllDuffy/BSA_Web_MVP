@@ -2,9 +2,12 @@ import React, { Component } from 'react';
 import { Layout, Drawer, Menu, Breadcrumb,Row,Col,Typography,Form,Input} from 'antd';
 import { Link } from "react-router-dom";
 import { makeStyles } from '@material-ui/core/styles';
+import {CopyToClipboard} from 'react-copy-to-clipboard';
 import Button from '@material-ui/core/Button';
 const { Header, Content, Footer } = Layout;
 const { Title } = Typography;
+
+
 
 class About extends Component {
     state = {  }
@@ -23,6 +26,7 @@ class About extends Component {
         });
 
         const emailResponse = await response.json();
+        values = ""
       };
 
        gotoLink (ele){
@@ -86,10 +90,22 @@ class About extends Component {
                   </div>
                 </div>
                 <Row>
+                <Col span={24} className="newsletter-heading">
+                     <Title level={2}>Our Weekly Digest is Now Available!</Title>
+                     <h3>
+                     Version 1.0 of our weekly newsletter delivers nine summarized articles across the categories: Computers and Society (CS), Machine Learning (CS), and Computational Finance (Quant. Finance).
+                     </h3>
+                     <h3>
+                     Please sign up at the bottom of the page and reach out to us with any category requests or concerns. We hope you enjoy!
+                     </h3>
+                </Col>
+                </Row>
+
+                <Row>
                     <Col span={24} className="building-bsa-heading">
                       <Title level={1}> Building B.S.A. </Title>
                     </Col>
-                  </Row>
+                </Row>
                 <div className="building-bsa-content">
                   <div className="building-bsa-image">
                     <img src={require('../assets/BSA.gif')}/>
@@ -140,23 +156,22 @@ class About extends Component {
                   <h4>Get in touch: sudhakarneeraj@gmail.com</h4>
                  </div>
                </div>
-               <div className="newsletter">
-
-                 <div className="newsletter-text-content">
-                     <Col span={24}>
-                  <h1>Our Weekly Digest is Now Available!</h1>
-                  <h4>Version 1.0 of our weekly newsletter delivers nine summarized articles across the categories: Computers and Society (CS), Machine Learning (CS), and Computational Finance (Quant. Finance).</h4>
-                     <h4>Please sign up at the bottom of the page and reach out to us with any category requests or concerns. We hope you enjoy!</h4>
-                     <h4>{" "}</h4>
-                     <h4>{" "}</h4>
-                     </Col>
-                 </div>
-               </div>
                  <div className="donate-content">
                      <Col span={24}>
-                     <h4>Help us keep making great content and improving the site for your use. We are currently working on expanding functionality of the newsletter to allow you to pick your favorite categories.</h4>
-                         <h4>To support us in furthering our mission, please consider donating use the Paypal button below. Thank you!</h4>
+                         <h3>Our mission is to improve how we teach and learn.</h3>
+                         <h4>BSA is one component, reach out to learn about what else we're working on!</h4>
+                         <h4>{" "}</h4>
+                         <h4>Help us to improve the site for your use and pay for server + application costs. We are currently working on expanding functionality of the newsletter to allow you to pick your favorite categories.</h4>
+                         <h4>If you would like to support us, please consider donating with cryptocurrency or the Paypal button below. Thank you!</h4>
                      <h4>{" "}</h4>
+                     <h4>Our ETH Address: (click to copy)</h4>
+                     <CopyToClipboard text = {'0x21E9eFA43FA203eb6DAC847b7ccD627e61D860D3'}>
+                     <Button variant='outlined'> 0x21E9eFA43FA203eb6DAC847b7ccD627e61D860D3 </Button>
+                     </CopyToClipboard>
+                     <h4>BTC</h4>
+                     <CopyToClipboard text = {'bc1qdxcjxv47mm2wfa8vtpmvweawgzx2ga0njhzkez'}>
+                     <Button variant='outlined'> bc1qdxcjxv47mm2wfa8vtpmvweawgzx2ga0njhzkez </Button>
+                     </CopyToClipboard>
                      <h4>{" "}</h4>
                      </Col>
                  </div>
@@ -167,6 +182,8 @@ class About extends Component {
                         <img alt="" border="0" src="https://www.paypal.com/en_US/i/scr/pixel.gif" width="1" height="1" />
                     </form>
                  </div>
+
+
              </div>
           </Content>
         </div>
@@ -174,6 +191,7 @@ class About extends Component {
           <Footer id='news' style={{backgroundColor:'black', textAlign: 'left' }}>
         <Title level={3}>Interested in a Weekly Digest?</Title>
               Sign up for our BSA Newsletter!
+
         <Form name='myform' onFinish={this.onFinish}>
         <Form.Item name='email'>
         <Input
@@ -184,7 +202,7 @@ class About extends Component {
         </Form.Item>
         <Button
         type="primary"
-        htmlType="submit">
+        htmlType="submit" >
         Submit
       </Button>
         </Form>
