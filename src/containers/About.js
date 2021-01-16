@@ -161,6 +161,7 @@ class About extends Component {
                   <h4>Analytical problem solving while leveraging the power of computing and Machine Learning is of special interest to me. I hope to continue this passion in the financial services industry to deliver unique, timely solutions.</h4>
                   <h4>Neeraj is currently in his final year as a combined BS Chemical Engineering/MS Engineering Management candidate. </h4>
                   <h4>Get in touch: sudhakarneeraj@gmail.com</h4>
+                      <h4>{" "}</h4>
                      <Row>
                         <Col span={24}>
                          <h3>Our mission is to improve how we teach and learn.</h3>
