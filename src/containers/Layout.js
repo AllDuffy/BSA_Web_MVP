@@ -24,13 +24,13 @@ const { Option } = Select;
 const { Title } = Typography;
 
 class CustomLayout extends Component {
-  state = { text: 'Submit',
+  state = {
     collapsed: false,
   };
   constructor(props){ 
     super(props);
     this.state = {
-
+        text: 'Submit',
         articles:[],
         selectedSlug:'',
         selectedDate:'',
