@@ -9,6 +9,7 @@ const { Title } = Typography;
 
 
 
+
 class About extends Component {
     state = {  }
 
@@ -36,10 +37,15 @@ class About extends Component {
             behavior: "smooth"
         });
     }
+
     state = {
-      current: 'mail',
+      current: 'Submit',
       visible: false
     }
+    changeText = (current) => {
+
+        this.setState({ current });
+        };
     showDrawer = () => {
       this.setState({
         visible: true,
@@ -51,6 +57,7 @@ class About extends Component {
       });
     };
     render() {
+        const { current } = this.state
       return (
         <Layout className="layout">
           <Header className="header-bar">
@@ -201,9 +208,9 @@ class About extends Component {
 
         </Form.Item>
         <Button
-        type="primary"
-        htmlType="submit" >
-        Submit
+            type="primary"
+            htmlType="submit"
+            onClick={ () => { this.changeText("Submitted!")}  }> {current}
       </Button>
         </Form>
         </Footer>

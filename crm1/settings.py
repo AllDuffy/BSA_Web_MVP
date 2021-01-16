@@ -29,7 +29,7 @@ SECRET_KEY = 'cz=&%f*9(d*zo$_55p=(p)(eki#p$pb^0159-)8k^6$9c3l&_b'
 DEBUG = True
 
 ALLOWED_HOSTS = ['https://bytesizearxiv.org', 'http://bytesizearxiv.org', 'bsa-web.herokuapp.com', '127.0.0.1',
-                 '127.0.0.1:8000', 'https://www.bytesizearxiv.org', 'www.bytesizearxiv.org', 'bytesizearxiv.org'']
+                 '127.0.0.1:8000', 'https://www.bytesizearxiv.org', 'www.bytesizearxiv.org', 'bytesizearxiv.org']
 
 # Application definition
 
@@ -51,7 +51,7 @@ MIDDLEWARE = [
     'corsheaders.middleware.CorsMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
-    'django.middlare.csrf.CsrfViewMiddleware',
+    'django.middleware.csrf.CsrfViewMiddleware',
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',

@@ -30,6 +30,7 @@ class CustomLayout extends Component {
   constructor(props){ 
     super(props);
     this.state = {
+        current: 'Submit',
         articles:[],
         selectedSlug:'',
         selectedDate:'',
@@ -193,6 +194,10 @@ class CustomLayout extends Component {
     
     const emailResponse = await response.json();
   };
+  changeText = (current) => {
+
+        this.setState({ current });
+        };
 
    gotoLink (ele){
     let offsetTop  = document.getElementById(ele).offsetTop;
@@ -202,7 +207,7 @@ class CustomLayout extends Component {
     });
 }
   render() { 
-
+    const { text } = this.state;
     const{ articles, articleData , dateArray} = this.state ;
     const resume = articles.map((items, i) => {
       return (
@@ -326,10 +331,10 @@ class CustomLayout extends Component {
 
           </Form.Item>
           <Button
-          type="primary"
-          htmlType="submit">
-          Submit
-        </Button>
+            type="primary"
+            htmlType="submit"
+            onClick={ () => { this.changeText("Submitted!")}  }> {text}
+      </Button>
           </Form>
 
           </Footer>
