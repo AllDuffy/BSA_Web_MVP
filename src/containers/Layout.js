@@ -24,13 +24,13 @@ const { Option } = Select;
 const { Title } = Typography;
 
 class CustomLayout extends Component {
-  state = {
+  state = { text: 'Submit',
     collapsed: false,
   };
   constructor(props){ 
     super(props);
     this.state = {
-        current: 'Submit',
+
         articles:[],
         selectedSlug:'',
         selectedDate:'',
@@ -194,9 +194,9 @@ class CustomLayout extends Component {
     
     const emailResponse = await response.json();
   };
-  changeText = (current) => {
+  changeText = (text) => {
 
-        this.setState({ current });
+        this.setState({ text });
         };
 
    gotoLink (ele){
