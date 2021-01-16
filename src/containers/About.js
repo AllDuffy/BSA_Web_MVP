@@ -146,7 +146,7 @@ class About extends Component {
                  <div className="duffy-text-content">
                    <h1>Alex Duffy</h1>
                    <h4>Hi, I'm Alex! I currently work at EY as a Data and Analytics Consultant and am based out of Los Angeles, CA. Prior to EY, I've been lucky to have spent time at Amazon Robotics, Hasbro, ENSEEIHT in France, and MathTree as an engineer, designer, researcher, and instructor.</h4>
-                   <h4>Ambiguous problems excite me - I'm curious about building for technical progress in society, particularly how to improve our approach to education.Education is especially important as it is a required tool for chasing dreams.</h4>
+                   <h4>Ambiguous problems excite me - I'm curious about building for technical progress in society, particularly how to improve our approach to education.</h4>
                    <h4>Alex received his B.S. in Electrical and Computer Engineering from Northeastern University.</h4>
                    <h4>Get in touch: alx.dfy@gmail.com</h4>
                  </div>
@@ -161,10 +161,8 @@ class About extends Component {
                   <h4>Analytical problem solving while leveraging the power of computing and Machine Learning is of special interest to me. I hope to continue this passion in the financial services industry to deliver unique, timely solutions.</h4>
                   <h4>Neeraj is currently in his final year as a combined BS Chemical Engineering/MS Engineering Management candidate. </h4>
                   <h4>Get in touch: sudhakarneeraj@gmail.com</h4>
-                 </div>
-               </div>
-                 <div className="donate-content">
-                     <Col span={24}>
+                     <Row>
+                        <Col span={24}>
                          <h3>Our mission is to improve how we teach and learn.</h3>
                          <h4>BSA is one component, reach out to learn about what else we're working on!</h4>
                          <h4>{" "}</h4>
@@ -181,7 +179,9 @@ class About extends Component {
                      </CopyToClipboard>
                      <h4>{" "}</h4>
                      </Col>
+                     </Row>
                  </div>
+               </div>
                  <div>
                      <form action="https://www.paypal.com/donate" method="post" target="_top">
                         <input type="hidden" name="hosted_button_id" value="SF5Z6C6X37EFU" />

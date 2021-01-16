@@ -29,7 +29,7 @@ SECRET_KEY = 'cz=&%f*9(d*zo$_55p=(p)(eki#p$pb^0159-)8k^6$9c3l&_b'
 DEBUG = True
 
 ALLOWED_HOSTS = ['https://bytesizearxiv.org', 'http://bytesizearxiv.org', 'bsa-web.herokuapp.com', '127.0.0.1',
-                 '127.0.0.1:8080', 'https://www.bytesizearxiv.org', 'www.bytesizearxiv.org', 'bytesizearxiv.org']
+                 '127.0.0.1:8000', 'https://www.bytesizearxiv.org', 'www.bytesizearxiv.org', 'bytesizearxiv.org']
 
 # Application definition
 
@@ -47,6 +47,7 @@ INSTALLED_APPS = [
 ]
 
 MIDDLEWARE = [
+    'django.middleware.security.SecurityMiddleware',
     'corsheaders.middleware.CorsMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
@@ -57,6 +58,8 @@ MIDDLEWARE = [
     'whitenoise.middleware.WhiteNoiseMiddleware',
 ]
 
+SECURE_PROXY_SSL_HEADER = ('HTTP_X_FORWARDED_PROTO', 'https')
+SECURE_SSL_REDIRECT = True
 
 ROOT_URLCONF = 'crm1.urls'
 CORS_ORIGIN_ALLOW_ALL = True
