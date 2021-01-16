@@ -24,7 +24,7 @@ const { Option } = Select;
 const { Title } = Typography;
 
 class CustomLayout extends Component {
-  state = {
+  state = { text: 'Submit',
     collapsed: false,
   };
   constructor(props){ 
