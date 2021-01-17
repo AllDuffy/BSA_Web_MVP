@@ -161,9 +161,10 @@ class About extends Component {
                   <h4>Analytical problem solving while leveraging the power of computing and Machine Learning is of special interest to me. I hope to continue this passion in the financial services industry to deliver unique, timely solutions.</h4>
                   <h4>Neeraj is currently in his final year as a combined BS Chemical Engineering/MS Engineering Management candidate. </h4>
                   <h4>Get in touch: sudhakarneeraj@gmail.com</h4>
-                      <h4>{" "}</h4>
-                     <Row>
-                        <Col span={24}>
+                 </div>
+               </div>
+                 <div className="donate-content">
+                     <Col span={24}>
                          <h3>Our mission is to improve how we teach and learn.</h3>
                          <h4>BSA is one component, reach out to learn about what else we're working on!</h4>
                          <h4>{" "}</h4>
@@ -174,16 +175,14 @@ class About extends Component {
                      <CopyToClipboard text = {'0x21E9eFA43FA203eb6DAC847b7ccD627e61D860D3'}>
                      <Button variant='outlined'> 0x21E9eFA43FA203eb6DAC847b7ccD627e61D860D3 </Button>
                      </CopyToClipboard>
-                            <h4>{" "}</h4>
                      <h4>BTC</h4>
+                          <h4>{" "}</h4>
                      <CopyToClipboard text = {'bc1qdxcjxv47mm2wfa8vtpmvweawgzx2ga0njhzkez'}>
                      <Button variant='outlined'> bc1qdxcjxv47mm2wfa8vtpmvweawgzx2ga0njhzkez </Button>
                      </CopyToClipboard>
                      <h4>{" "}</h4>
                      </Col>
-                     </Row>
                  </div>
-               </div>
                  <div>
                      <form action="https://www.paypal.com/donate" method="post" target="_top">
                         <input type="hidden" name="hosted_button_id" value="SF5Z6C6X37EFU" />
