@@ -175,8 +175,8 @@ class About extends Component {
                      <CopyToClipboard text = {'0x21E9eFA43FA203eb6DAC847b7ccD627e61D860D3'}>
                      <Button variant='outlined'> 0x21E9eFA43FA203eb6DAC847b7ccD627e61D860D3 </Button>
                      </CopyToClipboard>
-                     <h4>BTC</h4>
                           <h4>{" "}</h4>
+                     <h4>BTC</h4>
                      <CopyToClipboard text = {'bc1qdxcjxv47mm2wfa8vtpmvweawgzx2ga0njhzkez'}>
                      <Button variant='outlined'> bc1qdxcjxv47mm2wfa8vtpmvweawgzx2ga0njhzkez </Button>
                      </CopyToClipboard>
