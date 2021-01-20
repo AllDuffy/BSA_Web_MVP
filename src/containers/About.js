@@ -1,4 +1,6 @@
 import React, { Component } from 'react';
+import ReactDOM from 'react-dom';
+import { SocialIcon } from 'react-social-icons';
 import { Layout, Drawer, Menu, Breadcrumb,Row,Col,Typography,Form,Input} from 'antd';
 import { Link } from "react-router-dom";
 import { makeStyles } from '@material-ui/core/styles';
@@ -75,6 +77,9 @@ class About extends Component {
               >
                Newsletter
               </Button>
+                <SocialIcon className="twitter-icon" url="https://twitter.com/ByteSizeArxiv" />
+                <SocialIcon  className="fb-icon" url="https://www.facebook.com/ByteSizeArXiv" />
+                <SocialIcon  className="yt-icon" url="https://m.youtube.com/channel/UCvZQkeHN8tI6H_WAbZ4X1eA" />
              </div>
           </Header>
           <div style={{whiteSpace: 'pre-wrap', overflowWrap: 'break-word', color:'#FAEEDC', textAlign:'left',float:'middle'}}>
@@ -157,7 +162,7 @@ class About extends Component {
                  </div>
                  <div className="neeraj-text-content">
                   <h1>Neeraj Sudhakar</h1>
-                  <h4>Hi, I'm Neeraj Sudhakar! Over the past few years I have had the opportunity to work at Kumon,Wealth Planning Asset Management, Vertex Pharmaceuticals and Mersana Therapeutics as a tutor, quantitative analyst, researcher and process optimization engineer.</h4>
+                  <h4>Hi, I'm Neeraj Sudhakar! Over the past few years I have had the opportunity to work at Kumon, Wealth Planning Asset Management, Vertex Pharmaceuticals and Mersana Therapeutics as a tutor, quantitative analyst, researcher and process optimization engineer.</h4>
                   <h4>Analytical problem solving while leveraging the power of computing and Machine Learning is of special interest to me. I hope to continue this passion in the financial services industry to deliver unique, timely solutions.</h4>
                   <h4>Neeraj is currently in his final year as a combined BS Chemical Engineering/MS Engineering Management candidate. </h4>
                   <h4>Get in touch: sudhakarneeraj@gmail.com</h4>
@@ -196,7 +201,7 @@ class About extends Component {
           </Content>
         </div>
 
-          <Footer id='news' style={{backgroundColor:'black', textAlign: 'left' }}>
+          <Footer className="footer" id='news'>
         <Title level={3}>Interested in a Weekly Digest?</Title>
               Sign up for our BSA Newsletter!
 

@@ -11,6 +11,7 @@ https://docs.djangoproject.com/en/3.0/ref/settings/
 """
 
 import os
+import dj_database_url
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
@@ -61,6 +62,7 @@ MIDDLEWARE = [
 SECURE_PROXY_SSL_HEADER = ('HTTP_X_FORWARDED_PROTO', 'https')
 SECURE_SSL_REDIRECT = True
 
+
 ROOT_URLCONF = 'crm1.urls'
 CORS_ORIGIN_ALLOW_ALL = True
 TEMPLATES = [
@@ -84,13 +86,17 @@ WSGI_APPLICATION = 'crm1.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/3.0/ref/settings/#databases
 
+# DATABASES = {'default': dj_database_url.config(conn_max_age=600, ssl_require=True)}
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+        'ENGINE': 'django.db.backends.postgresql_psycopg2',
+        'NAME': 'd8ucnku37ad2h6',
+        'USER': 'iyapzknqdtxoyy',
+        'PASSWORD': '8a68181a4bfaa8f84621c364d79f6fb510d3b3844a772af5e44aa7351c77245a',
+        'HOST': 'ec2-34-235-62-201.compute-1.amazonaws.com', # Or something like this
+        'PORT': '5432',
     }
 }
-
 # Password validation
 # https://docs.djangoproject.com/en/3.0/ref/settings/#auth-password-validators
 
@@ -130,6 +136,6 @@ MEDIA_URL = '/images/'
 
 CSRF_COOKIE_NAME = "XCSRF-TOKEN"
 
-FROM_EMAIL = 'sudhakarneeraj@gmail.com'
-SENDGRID_API_KEY = "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"
+FROM_EMAIL = 'digest@bytesizearxiv.org'
+SENDGRID_API_KEY = "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"
 

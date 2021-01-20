@@ -1,4 +1,6 @@
 import React, { Component } from 'react';
+import ReactDOM from 'react-dom';
+import { SocialIcon } from 'react-social-icons';
 import { Layout, Menu, Breadcrumb, Select,Typography, Spin, Input,Form  } from "antd";
 import Button from '@material-ui/core/Button';
 import {
@@ -16,6 +18,7 @@ import {
   VideoCameraOutlined,
   UploadOutlined,
 } from '@ant-design/icons';
+
 
 
 const { SubMenu } = Menu;
@@ -254,6 +257,10 @@ class CustomLayout extends Component {
           >
             Newsletter
           </Button>
+          <SocialIcon className="twitter-icon" url="https://twitter.com/ByteSizeArxiv" />
+          <SocialIcon  className="fb-icon" url="https://www.facebook.com/ByteSizeArXiv" />
+          <SocialIcon  className="yt-icon" url="https://m.youtube.com/channel/UCvZQkeHN8tI6H_WAbZ4X1eA" />
+
           </div>
       </Header>
       <Layout className='bsa' style={{marginTop:'60px'}}>
@@ -318,7 +325,7 @@ class CustomLayout extends Component {
             </div>
           </Content>
 
-          <Footer id='news' style={{background:'black', textAlign: 'left' }}>
+          <Footer className="footer" id='news' >
 
           <Title level={2}>Interested in a weekly digest?</Title>
             Sign up for our BSA Newsletter!
