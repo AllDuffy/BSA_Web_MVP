@@ -343,8 +343,16 @@ def store_email(request):
         data = json.loads(data)
         email = data['email']
         print('email ', email)
-        obj = Subscriber(email=email)
-        obj.save()
+        obj = Subscriber(email=request.POST['email'])
+        message = Mail(
+            from_email=settings.FROM_EMAIL,
+            to_emails=obj.email,
+            subject='Newsletter Confirmation',
+            html_content="Thank you for signing up for our newsletter! \n"
+                         "We hope you enjoy learning with us \n"
+                         "Alex and Neeraj")
+        sg = SendGridAPIClient(settings.SENDGRID_API_KEY)
+        response = sg.send(message)
         return JsonResponse({'email stored ': email})
 
     return JsonResponse({'email stored ': '0'})

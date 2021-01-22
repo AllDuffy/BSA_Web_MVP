@@ -48,7 +48,7 @@ INSTALLED_APPS = [
 ]
 
 MIDDLEWARE = [
-    'django.middleware.security.SecurityMiddleware',
+
     'corsheaders.middleware.CorsMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
@@ -58,10 +58,6 @@ MIDDLEWARE = [
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
     'whitenoise.middleware.WhiteNoiseMiddleware',
 ]
-
-SECURE_PROXY_SSL_HEADER = ('HTTP_X_FORWARDED_PROTO', 'https')
-SECURE_SSL_REDIRECT = True
-
 
 ROOT_URLCONF = 'crm1.urls'
 CORS_ORIGIN_ALLOW_ALL = True
@@ -93,7 +89,7 @@ DATABASES = {
         'NAME': 'd8ucnku37ad2h6',
         'USER': 'iyapzknqdtxoyy',
         'PASSWORD': '8a68181a4bfaa8f84621c364d79f6fb510d3b3844a772af5e44aa7351c77245a',
-        'HOST': 'ec2-34-235-62-201.compute-1.amazonaws.com', # Or something like this
+        'HOST': 'ec2-34-235-62-201.compute-1.amazonaws.com',  # Or something like this
         'PORT': '5432',
     }
 }
@@ -138,4 +134,5 @@ CSRF_COOKIE_NAME = "XCSRF-TOKEN"
 
 FROM_EMAIL = 'digest@bytesizearxiv.org'
 SENDGRID_API_KEY = "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"
+
 
