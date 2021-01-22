@@ -343,7 +343,7 @@ def store_email(request):
         data = json.loads(data)
         email = data['email']
         print('email ', email)
-        obj = Subscriber(email=request.POST['email'])
+        obj = Subscriber(email=email)
         obj.save()
         message = Mail(
             from_email=settings.FROM_EMAIL,
