@@ -344,6 +344,7 @@ def store_email(request):
         email = data['email']
         print('email ', email)
         obj = Subscriber(email=request.POST['email'])
+        obj.save()
         message = Mail(
             from_email=settings.FROM_EMAIL,
             to_emails=obj.email,
