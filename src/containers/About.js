@@ -110,6 +110,9 @@ class About extends Component {
                      <h3>
                      Please sign up at the bottom of the page and reach out to us with any category requests or concerns. We hope you enjoy!
                      </h3>
+                    <h3>
+                        If you do not see our confirmation email within a few minutes, please check your spam folder.
+                     </h3>
                 </Col>
                 </Row>
 
