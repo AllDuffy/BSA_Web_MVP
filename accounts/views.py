@@ -349,7 +349,7 @@ def store_email(request):
             from_email=settings.FROM_EMAIL,
             to_emails=obj.email,
             subject='Newsletter Confirmation',
-            html_content="Thank you for signing up to our BSA newsletter! We hope you enjoy learning with us. \
+            html_content="Thank you for signing up to our BSA newsletter! We hope you enjoy learning with us. <br> \
                     Don’t hesitate to send us an email with any comments or inquiries. <br> \
                      <br> \
                     Alex and Neeraj")
