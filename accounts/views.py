@@ -348,7 +348,7 @@ def store_email(request):
         message = Mail(
             from_email=settings.FROM_EMAIL,
             to_emails=obj.email,
-            subject='Newsletter Confirmation',
+            subject='Welcome to the Byte Size ArXiv Weekly Digest!',
             html_content="Thank you for signing up to our BSA newsletter! We hope you enjoy learning with us. <br> \
                     Don’t hesitate to send us an email with any comments or inquiries. <p> \
                      <br> \
