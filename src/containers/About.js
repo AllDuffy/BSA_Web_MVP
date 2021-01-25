@@ -63,9 +63,11 @@ class About extends Component {
       return (
         <Layout className="layout">
           <Header className="header-bar">
-            <div className="header-bar-logo">
+              <a href='/'>
+                <div className="header-bar-logo">
               <Title className="header-bar-title" level={2}> Byte Size ArXiv </Title>
             </div>
+              </a>
             <div className="header-bar-menu">
               <Button className="home-button" size='large' href='/'> Home </Button>
               <Button className="bsa-button" size='large' href = '/B.S.A.'> B.S.A. </Button>
@@ -77,9 +79,6 @@ class About extends Component {
               >
                Newsletter
               </Button>
-                <SocialIcon className="twitter-icon" url="https://twitter.com/ByteSizeArxiv" />
-                <SocialIcon  className="fb-icon" url="https://www.facebook.com/ByteSizeArXiv" />
-                <SocialIcon  className="yt-icon" url="https://m.youtube.com/channel/UCvZQkeHN8tI6H_WAbZ4X1eA" />
              </div>
           </Header>
           <div style={{whiteSpace: 'pre-wrap', overflowWrap: 'break-word', color:'#FAEEDC', textAlign:'left',float:'middle'}}>
@@ -96,6 +95,11 @@ class About extends Component {
                       <div className="get-started-button">
                         <Button variant='outlined' href='/B.S.A.'> Try Byte Size ArXiv </Button>
                       </div>
+                      <div className={"social-icons"} style={{float:'middle', textAlign:'center', paddingTop:'2em' }}>
+                    <SocialIcon className="twitter-icon" url="https://twitter.com/ByteSizeArxiv"/>
+                    <SocialIcon  className="fb-icon" url="https://www.facebook.com/ByteSizeArXiv"/>
+                    <SocialIcon  className="yt-icon" url="https://m.youtube.com/channel/UCvZQkeHN8tI6H_WAbZ4X1eA"/>
+                      </div>
                   </div>
                   <div className="summary-image">
                     <img src={require('../assets/BSA_Logo.png')}/>
@@ -108,11 +112,26 @@ class About extends Component {
                      Version 1.0 of our weekly newsletter delivers nine summarized articles across the categories: Computers and Society (CS), Machine Learning (CS), and Computational Finance (Quant. Finance).
                      </h3>
                      <h3>
-                     Please sign up at the bottom of the page and reach out to us with any category requests or concerns. We hope you enjoy!
+                     Please sign up using the form below or at the bottom of the page and reach out to us with any category requests or concerns. We hope you enjoy!
                      </h3>
                     <h3>
                         If you do not see our confirmation email within a few minutes, please check your spam folder.
                      </h3>
+                    <h3>  </h3>
+                    <Form name='myform' onFinish={this.onFinish}>
+                        <Form.Item name='email'>
+                        <Input
+
+                        style={{margin: '0 auto',width:'200px'}}
+                        placeholder="Enter Email to subscribe" />
+                        </Form.Item>
+                        <Button
+                            variant='outlined'
+                            type="primary"
+                            htmlType="submit"
+                            onClick={ () => { this.changeText("Submitted!")}  }> {current}
+                        </Button>
+                    </Form>
                 </Col>
                 </Row>
 
@@ -141,9 +160,11 @@ class About extends Component {
                 </div>
                 <Row>
                     <Col span={24} style={{textAlign:'center', paddingTop:'2em'}}>
-                   <Title level={1} style={{color:'black', paddingBottom:'1em'}}>
-                    About the Founders
+                   <Title level={1} style={{color:'black', paddingBottom:'.3em'}}>
+                    About Us
                 </Title>
+                        <h3>Our mission is to improve how we teach and learn.</h3>
+                      <h3>BSA is one component, reach out to learn about what else we're working on!</h3>
                         </Col>
                   </Row>
              <div className="founders">
@@ -167,39 +188,35 @@ class About extends Component {
                   <h1>Neeraj Sudhakar</h1>
                   <h4>Hi, I'm Neeraj Sudhakar! Over the past few years I have had the opportunity to work at Kumon, Wealth Planning Asset Management, Vertex Pharmaceuticals and Mersana Therapeutics as a tutor, quantitative analyst, researcher and process optimization engineer.</h4>
                   <h4>Analytical problem solving while leveraging the power of computing and Machine Learning is of special interest to me. I hope to continue this passion in the financial services industry to deliver unique, timely solutions.</h4>
-                  <h4>Neeraj is currently in his final year as a combined BS Chemical Engineering/MS Engineering Management candidate. </h4>
+                  <h4>Neeraj is currently in his final year as a combined BS Chemical Engineering/MS Engineering Management candidate at Northeastern University. </h4>
                   <h4>Get in touch: sudhakarneeraj@gmail.com</h4>
                  </div>
                </div>
                  <div className="donate-content">
-                     <Col span={24}>
-                         <h3>Our mission is to improve how we teach and learn.</h3>
-                         <h4>BSA is one component, reach out to learn about what else we're working on!</h4>
-                         <h4>{" "}</h4>
-                         <h4>Help us to improve the site for your use and pay for server + application costs. We are currently working on expanding functionality of the newsletter to allow you to pick your favorite categories.</h4>
-                         <h4>If you would like to support us, please consider donating with cryptocurrency or the Paypal button below. Thank you!</h4>
+                   <Title level={1} style={{color:'black', textAlign:'center', paddingBottom:'.3em'}}>
+                    Donation and Support
+                </Title>
+                     <h4>Help us to improve the site for your use and pay for server + application costs. We are currently working on expanding functionality of the newsletter to allow you to pick your favorite categories.</h4>
+                     <h4>If you would like to support us, please consider donating with cryptocurrency or the Paypal button below. Thank you!</h4>
                      <h4>{" "}</h4>
                      <h4>Our ETH Address: (click to copy)</h4>
                      <CopyToClipboard text = {'0x21E9eFA43FA203eb6DAC847b7ccD627e61D860D3'}>
                      <Button variant='outlined'> 0x21E9eFA43FA203eb6DAC847b7ccD627e61D860D3 </Button>
                      </CopyToClipboard>
-                          <h4>{" "}</h4>
+                     <h4>{" "}</h4>
                      <h4>BTC</h4>
                      <CopyToClipboard text = {'bc1qdxcjxv47mm2wfa8vtpmvweawgzx2ga0njhzkez'}>
                      <Button variant='outlined'> bc1qdxcjxv47mm2wfa8vtpmvweawgzx2ga0njhzkez </Button>
                      </CopyToClipboard>
                      <h4>{" "}</h4>
-                     </Col>
                  </div>
-                 <div>
+                 <div className={"donation-form"} style={{paddingBottom:'.8em'}}>
                      <form action="https://www.paypal.com/donate" method="post" target="_top">
                         <input type="hidden" name="hosted_button_id" value="SF5Z6C6X37EFU" />
                         <input type="image" src="https://www.paypalobjects.com/en_US/i/btn/btn_donateCC_LG.gif" border="0" name="submit" title="PayPal - The safer, easier way to pay online!" alt="Donate with PayPal button" />
                         <img alt="" border="0" src="https://www.paypal.com/en_US/i/scr/pixel.gif" width="1" height="1" />
                     </form>
                  </div>
-
-
              </div>
           </Content>
         </div>
@@ -217,6 +234,7 @@ class About extends Component {
 
         </Form.Item>
         <Button
+            variant='outlined'
             type="primary"
             htmlType="submit"
             onClick={ () => { this.changeText("Submitted!")}  }> {current}

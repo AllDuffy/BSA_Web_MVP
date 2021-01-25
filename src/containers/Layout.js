@@ -233,17 +233,20 @@ class CustomLayout extends Component {
 
       <Layout classname="header">
       <Header className="header-bar">
-        <div className="header-bar-logo">
-          <Title className="header-bar-title" level={2}>
+          <div className="header-bar-logo">
+            <Title className="header-bar-title" level={2} href='/'>
           {React.createElement(this.state.collapsed ? MenuUnfoldOutlined : MenuFoldOutlined, {
           className: 'trigger',
           onClick: this.toggle,
-          })} 
+          })}
+          <a href='/'>
           <span style={{
+            color:'black',
             paddingLeft:'5px',
             paddingRight:'20px'}}>
           Byte Size ArXiv
           </span>
+          </a>
            </Title>
         </div>
         <div className="header-bar-menu">
@@ -257,10 +260,6 @@ class CustomLayout extends Component {
           >
             Newsletter
           </Button>
-          <SocialIcon className="twitter-icon" url="https://twitter.com/ByteSizeArxiv" />
-          <SocialIcon  className="fb-icon" url="https://www.facebook.com/ByteSizeArXiv" />
-          <SocialIcon  className="yt-icon" url="https://m.youtube.com/channel/UCvZQkeHN8tI6H_WAbZ4X1eA" />
-
           </div>
       </Header>
       <Layout className='bsa' style={{marginTop:'60px'}}>
