@@ -196,6 +196,7 @@ class About extends Component {
                    <Title level={1} style={{color:'black', textAlign:'center', paddingBottom:'.3em'}}>
                     Donation and Support
                 </Title>
+                     <Col span={24} style={{textAlign:'center'}}>
                      <h4>Help us to improve the site for your use and pay for server + application costs. We are currently working on expanding functionality of the newsletter to allow you to pick your favorite categories.</h4>
                      <h4>If you would like to support us, please consider donating with cryptocurrency or the Paypal button below. Thank you!</h4>
                      <h4>{" "}</h4>
@@ -209,6 +210,7 @@ class About extends Component {
                      <Button variant='outlined'> bc1qdxcjxv47mm2wfa8vtpmvweawgzx2ga0njhzkez </Button>
                      </CopyToClipboard>
                      <h4>{" "}</h4>
+                     </Col>
                  </div>
                  <div className={"donation-form"} style={{paddingBottom:'.8em'}}>
                      <form action="https://www.paypal.com/donate" method="post" target="_top">
