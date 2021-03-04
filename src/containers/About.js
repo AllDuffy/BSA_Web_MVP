@@ -65,7 +65,7 @@ class About extends Component {
           <Header className="header-bar">
               <a href='/'>
                 <div className="header-bar-logo">
-              <Title className="header-bar-title" level={2}> Byte Size ArXiv </Title>
+              <Title className="header-bar-title" level={2}> Byte Size Arxiv </Title>
             </div>
               </a>
             <div className="header-bar-menu">
@@ -85,15 +85,15 @@ class About extends Component {
             <Content style={{color:'#323030', backgroundColor:'white', padding: '0 50px' ,margin:'60px 0', marginLeft:'5em', marginRight:'5em'}}>
                 <div className="summary">
                   <div className="summary-content">
-                     <Title className="summary-heading" level={1}>Welcome to Byte Size ArXiv</Title>
+                     <Title className="summary-heading" level={1}>Welcome to Byte Size Arxiv</Title>
                      <h3 className="summary-text">
-                       We are on a mission to make it easy for you to stay up to date with cutting edge research being shared on ArXiv.org.
+                       We are on a mission to make it easy for you to stay up to date with cutting edge research being shared on Arxiv.org.
                      </h3>
                      <h3 className="get-started-text">
                       To get started, click the button below and select a category to browse Byte-Size summaries of brand new publications; made daily using Machine Learning.
                      </h3>
                       <div className="get-started-button">
-                        <Button variant='outlined' href='/B.S.A.'> Try Byte Size ArXiv </Button>
+                        <Button variant='outlined' href='/B.S.A.'> Try Byte Size Arxiv </Button>
                       </div>
                       <div className={"social-icons"} style={{float:'middle', textAlign:'center', paddingTop:'2em' }}>
                     <SocialIcon className="twitter-icon" url="https://twitter.com/ByteSizeArxiv"/>
@@ -146,7 +146,7 @@ class About extends Component {
                   </div>
                   <div className="building-bsa-text">
                     <h3>
-                      Everyday there are hundreds of peer-reviewed academic papers filled with cutting edge research being uploaded to Cornell's ArXiv.org. Byte Size ArXiv takes the articles as they are uploaded and isolates three key sentences in the abstract for a quickly digestible summary.
+                      Everyday there are hundreds of peer-reviewed academic papers filled with cutting edge research being uploaded to Cornell's ArXiv.org. Byte Size Arxiv takes the articles as they are uploaded and isolates three key sentences in the abstract for a quickly digestible summary.
                       This is done using term frequency–inverse document frequency (TF-IDF), a machine learning model.
                     </h3>
                     <h3>

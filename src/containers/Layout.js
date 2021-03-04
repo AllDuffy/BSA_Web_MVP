@@ -1,8 +1,9 @@
-import React, { Component } from 'react';
+import React, {Component, createElement} from 'react';
 import ReactDOM from 'react-dom';
 import { SocialIcon } from 'react-social-icons';
 import { Layout, Menu, Breadcrumb, Select,Typography, Spin, Input,Form  } from "antd";
 import Button from '@material-ui/core/Button';
+
 import {
   UserOutlined,
   LaptopOutlined,
@@ -215,46 +216,54 @@ class CustomLayout extends Component {
     const resume = articles.map((items, i) => {
       return (
          <SubMenu title={items[0]}>
-          {React.createElement(this.state.collapsed ? MenuUnfoldOutlined : MenuFoldOutlined, {
-          className: 'trigger',
-          onClick: this.toggle,
-          })}
+          {/*{React.createElement('p', {*/}
+          {/*className: 'trigger',*/}
+          {/*onClick: this.toggle,*/}
+          {/*}, this.state.collapsed ? "Show":"Hide")}*/}
+
           {items[1].map((deal, idx) =>
             <Menu.Item
-              onClick={() => this.getArticle(deal.slug)}   
+              onClick={() => {this.getArticle(deal.slug) ; this.toggle()}}
+
               >{deal.category}
             </Menu.Item>  
           )}                      
         </SubMenu>
       )
     });
-    return ( 
+    return (
       <Spin spinning={this.state.loading}>  
 
       <Layout classname="header">
       <Header className="header-bar">
           <div className="header-bar-logo">
-            <Title className="header-bar-title" level={2} href='/'>
-          {React.createElement(this.state.collapsed ? MenuUnfoldOutlined : MenuFoldOutlined, {
+          {/*  <Title className="header-bar-title" size='small' level={2} href='/'>*/}
+          {/*  {React.createElement('div', {*/}
+          {/*className: 'trigger',*/}
+          {/*onClick: this.toggle,*/}
+          {/*}, this.state.collapsed ? "Show Menu":"Hide")}*/}
+          {/*  </Title>*/}
+          <Button>
+            {React.createElement('div', {
           className: 'trigger',
           onClick: this.toggle,
-          })}
-          <a href='/'>
+          }, this.state.collapsed ? "Show Menu":"Hide")}
+          </Button>
+              <a href='/'>
           <span style={{
             color:'black',
-            paddingLeft:'5px',
-            paddingRight:'20px'}}>
-          Byte Size ArXiv
+            fontSize : 28,
+            fontWeight: 'bold'}}>
+          Byte Size Arxiv
           </span>
           </a>
-           </Title>
         </div>
         <div className="header-bar-menu">
-          <Button className="home-button" size='large' href='/'> Home </Button>
-          <Button className="bsa-button" size='large' href = '/B.S.A.'> B.S.A. </Button>
+          <Button className="home-button" size='medium' href='/' type='secondary'> Home </Button>
+          <Button className="bsa-button" size='medium' href = '/B.S.A.' type='secondary'> B.S.A. </Button>
           <Button
             className="newsletter-button"
-            size='large'
+            size='medium'
             onClick={() => this.gotoLink('news')}
             type='secondary'
           >
