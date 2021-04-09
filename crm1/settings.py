@@ -45,6 +45,7 @@ INSTALLED_APPS = [
     'corsheaders',
     'accounts',
     'django_filters',
+    'facebook_pixel_code'
 ]
 
 MIDDLEWARE = [
@@ -137,5 +138,6 @@ CSRF_COOKIE_NAME = "XCSRF-TOKEN"
 
 FROM_EMAIL = 'digest@bytesizearxiv.org'
 SENDGRID_API_KEY = "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"
+FACEBOOK_PIXEL_CODE_ID = '348816040007625'
 
 

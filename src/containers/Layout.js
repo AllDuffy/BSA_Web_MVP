@@ -247,7 +247,7 @@ class CustomLayout extends Component {
             {React.createElement('div', {
           className: 'trigger',
           onClick: this.toggle,
-          }, this.state.collapsed ? "Show Menu":"Hide")}
+          }, this.state.collapsed ? "Show Menu":"")}
           </Button>
               <a href='/'>
           <span style={{
