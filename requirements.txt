@@ -35,3 +35,4 @@ sendgrid==6.4.8
 starkbank-ecdsa==1.1.0
 dj_database_url
 psycopg2-binary
+django-facebook-pixel-code
